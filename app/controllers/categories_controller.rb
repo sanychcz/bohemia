@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     if @category.destroy
-      redirect_to "/admin/caegories"
+      redirect_to "/admin/categories"
     end
   end
 
