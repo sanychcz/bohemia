@@ -1,0 +1,8 @@
+<% if object.errors.any? %>
+  <h2>Form is invalid</h2>
+  <ul>
+    <% for message in object.errors.full_messages %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
