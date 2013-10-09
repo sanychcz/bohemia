@@ -13,4 +13,133 @@
  *= require_tree .
  */
 
- 
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  width: 1106px;
+}
+
+body.app-layout {
+  background-color: red;
+}
+
+#cleaner {
+  clear: both;
+}
+
+/* Language bar */
+
+ #language-bar {
+  height: 50px;
+  width: 1106px;
+  background-color: yellow;
+  margin: 0 auto;
+ }
+
+ #language-selection {
+  height: 50px;
+  width: 100px;
+  float: right;
+  z-index: 100;
+  background-color: blue;
+ }
+
+/* Header */
+
+ #header {
+  margin: 0 auto;
+  width: 1106px;
+  height: 200px;
+  background-color: #10f2e8;
+ }
+
+ #header-logo {
+  float:left;
+  position: relative;
+  margin: 30px 50px;
+ }
+
+ #header-contact {
+  float: right;
+  position: relative;
+  margin: 30px 50px;
+ }
+
+ /* Navigation */
+
+ #navigation {
+  margin: 0 auto;
+  width: 1106px;
+  height: 60px;
+ }
+
+ #navigation-menu {
+  padding: 10px;
+  position: relative;
+  margin: auto;
+  width: 1106px;
+  height: 60px;
+  background-color: #ffd792;
+ }
+
+ #navigation-menu ul {
+   background-color: #ff9e00;
+   margin: 10px auto;
+   width:900px;
+   height: auto;
+  }
+
+#navigation-menu ul li {
+  background-color: #ffd792;
+  display: inline-block;
+  margin: 0 30px 0 0;
+ }
+
+ /* Central container */
+
+#central-box {
+  margin: 0 auto;
+  width: 1106px;
+  height: 300px;
+  background-color: #e2f0b6;
+}
+
+#main-content {
+  margin: 0 auto;
+  width: 1106px;
+  height: auto;
+  background-color: #666666;
+}
+
+/* Download container */
+
+#download {
+  margin: 0 auto;
+  width: 1106px;
+  height: 100px;
+  background-color: #0fff00;
+}
+
+/* Footer */
+
+#footer {
+  margin: 0 auto;
+  width: 1106px;
+  height: 300px;
+  background-color: #bf0000;
+}
+
+#footer-contact {
+  float:left;
+  width:30%;
+}
+
+#footer-sitemap {
+  float:left;
+  width:30%;
+}
+
+#footer-iformation {
+  float:right;
+  width:40%;
+}

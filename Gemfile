@@ -12,7 +12,11 @@ gem 'coffee-rails', '~> 4.0.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
-  gem 'factory_girl'
+end
+
+group :test do
+	gem 'database_cleaner'
+	gem 'factory_girl_rails'
   gem "capybara", "~> 2.1.0"
 end
 

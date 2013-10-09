@@ -20,25 +20,27 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="admin-layout">
 
     <p><%= flash[:success] %></p>
     <p><%= flash[:error] %></p>
     
-    <div class="row">
-      <div class="large-10 columns">
-        <h1>Administration</h1>
-      </div>    
-    </div>
-    <div class="row">
-      <div class="large-2 columns">
-        <%= render "admin/side_nav" %>
+    <% if user_signed_in? %>
+      <div class="row">
+        <div class="large-10 columns">
+          <h1>Administration</h1>
+        </div>    
       </div>
-      <div class="large-10 columns">
-        <%= yield %>
+      <div class="row">
+        <div class="large-2 columns">
+          <%= render "admin/side_nav" %>
+        </div>
+        <div class="large-10 columns">
+        </div>
       </div>
-    </div>
-    
+    <% end %>
+
+    <%= yield %>
 
     <%= javascript_include_tag "application" %>
   </body>

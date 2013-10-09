@@ -1,3 +1,23 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main-container {
+  /* IE10 Consumer Preview */ 
+  background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
+
+  /* Opera */ 
+  background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
+
+  /* W3C Markup, IE10 Release Preview */ 
+  background-image: linear-gradient(to top, #FFFFFF 0%, #00A3EF 100%);
+}

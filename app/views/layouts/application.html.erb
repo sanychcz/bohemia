@@ -20,16 +20,18 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <p><%= flash[:success] %></p>
-    <p><%= flash[:error] %></p>
-    
+  <body class="app-layout">
+
+    <%= render 'shared/user_nav' %>
+    <%= render 'layouts/lang_bar' %>
     <%= render 'layouts/header' %>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/central_block' %>
 
-    <%= yield %>
-
+    <section id="main-content">
+      <%= yield %>
+    </section>  
+      
     <%= render 'layouts/footer' %>
 
     <%= javascript_include_tag "application" %>
