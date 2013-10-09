@@ -1,14 +1,19 @@
 <% if user_signed_in? %>
-	<nav class="top-bar">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "Administration", "/admin" %></h1>
+      </li>
+    </ul>
     <section class="top-bar-section">
-	  	<ul class="right">
-			  <li class="active"><%= link_to "admin", "/admin" %></li>
-			  <li class="active"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
-		  
-			  <% if current_page?("/admin") %>
-			  	<li class="active"><%= link_to "home", home_path %></li>
-			  <% end %>
-		   </ul>
-	  </section>
-	</nav> 	
+      <ul class="right">
+        <li class="active"><%= link_to "admin", "/admin" %></li>
+        <li class="active"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+      
+        <% if current_page?("/admin") || current_page?("/admin/categories") %>
+          <li class="active"><%= link_to "home", root_path %></li>
+        <% end %>
+       </ul>
+    </section>
+  </nav>  
 <% end %>

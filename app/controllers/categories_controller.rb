@@ -2,6 +2,7 @@ class CategoriesController < ApplicationController
    
   before_action :find_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  layout :resolve_layout
 
   def index
     @categories = Category.all
@@ -17,7 +18,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to @category
+      redirect_to "/admin/categories"
       flash[:success] = "Success"
     else
       render 'new'
@@ -29,7 +30,7 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update_attributes(category_params)
-      redirect_to "/admin/caegories"
+      redirect_to "/admin/categories"
       flash[:success] = "Success"
     else
       flash.now[:error] = 'Unsuccsessful'
@@ -50,6 +51,15 @@ class CategoriesController < ApplicationController
     end
 
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, :description)
+    end
+
+    def resolve_layout
+      case action_name
+      when "new", "create", "edit"
+        "admin"
+      else
+        "application"
+      end
     end
 end

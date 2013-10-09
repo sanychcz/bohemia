@@ -2,6 +2,7 @@
   <%= simple_form_for @category do |f| %>
     <%= render 'shared/error_message', object: f.object %>
     <%= f.input :name %>
+    <%= f.input :description %>
     <%= f.submit "Save", :class => "button" %>
   <% end %>
 </div>

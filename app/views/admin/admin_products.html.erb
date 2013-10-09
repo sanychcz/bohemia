@@ -1,3 +1,24 @@
 <% provide :title, "Products" %>
 
-<h1>admin products</h1>
+
+<h1><%= link_to "Add new product", new_product_path %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">Product name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @products.each do |product| %>
+    <tbody>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= link_to "edit", edit_product_path(product) %></td>
+        <td><%= link_to "delete", product_path(product), 
+                                  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>    

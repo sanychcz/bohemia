@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   before_action :authenticate_user!
   layout "admin"
 
-  def admin_index
+  def admin_home
     @users = User.all
     @categories = Category.all
   end
@@ -13,5 +13,6 @@ class AdminController < ApplicationController
   end
 
   def admin_products
+    @products = Product.all
   end
 end

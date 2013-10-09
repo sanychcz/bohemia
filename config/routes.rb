@@ -8,8 +8,11 @@ Bohemia::Application.routes.draw do
   get "/users/sign_out" => "sessions#destroy"
 
   devise_for :users
-  resources :users, :categories
-  
+  resources :users
+  resources :categories
+  resources :products
+
+
   get '/admin' => "admin#admin_home"
   get 'admin/products' => "admin#admin_products"
   get 'admin/categories' => "admin#admin_categories"

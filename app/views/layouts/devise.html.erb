@@ -20,21 +20,9 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="admin-layout">
-    
-    <% if user_signed_in? %>
+  <body class="devise-layout">
 
-      <%= render 'shared/user_nav' %>  
-      
-      <div class="row">
-        <div class="large-2 columns">
-          <%= render "admin/side_nav" %>
-        </div>
-        <div class="large-10 columns">          
-           <%= yield %>
-        </div>
-      </div>
-    <% end %>
+    <%= yield %>
     
     <%= javascript_include_tag "application" %>
   </body>
