@@ -1,6 +1,6 @@
 <div class="row">
   <%= simple_form_for @product do |f| %>
-    <p><%= f.association :category, collection: Category.all, prompt: "Choose a category" %></p>
+    <p><%= f.association :category, collection: Category.all, :include_blank => false %></p>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :features %>     

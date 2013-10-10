@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   
+  before_action :find_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   layout :resolve_layout
 
   def index
@@ -7,7 +9,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
   def new    
@@ -24,11 +25,9 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
       redirect_to "/admin/products"
     else
@@ -37,7 +36,6 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
     if @product.destroy
       redirect_to "/admin/products"
     end
@@ -56,5 +54,9 @@ class ProductsController < ApplicationController
       else
         "application"
       end
+    end
+
+    def find_product
+      @product = Product.find(params[:id])
     end
 end

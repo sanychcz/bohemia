@@ -14,6 +14,7 @@ FactoryGirl.define do
   factory :product do
     name "category"
     description "I'm the best category in the world"
+    features "Features of best category in the world"
     association :category
   end
 end

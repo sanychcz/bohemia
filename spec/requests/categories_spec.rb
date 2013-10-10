@@ -49,4 +49,25 @@ describe "Categories" do
       page.should have_content(new_name)
     end
   end
+
+  describe "delete category" do
+    before { FactoryGirl.create(:category) }
+    before { FactoryGirl.create(:product, category: category)}
+    before { FactoryGirl.create(:product, category: category)}
+
+    it "should delete category" do
+      visit "/admin/categories/"
+      page.should have_title('Categories')
+      expect { first(:link, "delete").click }.to change(Category, :count).by(-1)
+    end
+
+    it "should destroy associated products" do
+      products = category.products.to_a
+      category.destroy
+      expect(products).not_to be_empty
+      products.each do |product|
+        expect(Product.where(id: product.id)).to be_empty
+      end
+    end
+  end
 end

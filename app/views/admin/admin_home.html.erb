@@ -1,3 +1,12 @@
 <% provide :title, "Administration" %>
 
-<h4><%= link_to "create new category", new_category_path %></h4>
+<div class="row">
+  <h1>Quick actions</h1>
+</div>
+<div class="6-large columns">
+  <ol>
+    <li><h5><%= link_to "Add new category", new_category_path %></h5></li>
+    <li><h5><%= link_to "Add new product", new_product_path %></h5></li>
+    <li><h5><%= link_to "Add news", new_category_path %></h5></li>
+  </ol>
+</div>

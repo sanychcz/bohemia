@@ -3,6 +3,6 @@
     <%= render 'shared/error_message', object: f.object %>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.submit "Save", :class => "button" %>
+    <%= f.submit "Save", :class => "button" %> or <%= link_to "go back", :back %>
   <% end %>
 </div>

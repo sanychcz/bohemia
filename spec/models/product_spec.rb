@@ -2,8 +2,9 @@ require 'spec_helper'
 
 describe Product do
   
-  before { @product = Product.new(name: "product", description: "Nice product", 
-  								  features: "nice features") }
+  let(:category) { FactoryGirl.create(:category) }
+  before { @product = category.products.build(name: "product", description: "Nice product", 
+  								  features: "nice features" ) }
 
   subject { @product }
 
@@ -14,4 +15,23 @@ describe Product do
 
   it { should be_valid }
 
+  describe "when name is not present" do
+    before { @product.name = " " }
+    it { should_not be_valid }
+  end
+
+  describe "when description is not present" do
+    before { @product.description = " " }
+    it { should_not be_valid }
+  end
+
+  describe "when features is not present" do
+    before { @product.features = " " }
+    it { should_not be_valid }
+  end
+
+  describe "when category_id is not present" do
+    before { @product.category_id = " " }
+    it { should_not be_valid }
+  end
 end
