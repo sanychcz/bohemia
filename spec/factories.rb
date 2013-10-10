@@ -17,4 +17,9 @@ FactoryGirl.define do
     features "Features of best category in the world"
     association :category
   end
+
+  factory :article do
+    name "article title"
+    content "article content"
+  end
 end

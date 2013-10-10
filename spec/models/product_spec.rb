@@ -4,7 +4,7 @@ describe Product do
   
   let(:category) { FactoryGirl.create(:category) }
   before { @product = category.products.build(name: "product", description: "Nice product", 
-  								  features: "nice features" ) }
+  								                            features: "nice features" ) }
 
   subject { @product }
 

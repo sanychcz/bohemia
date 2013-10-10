@@ -1,22 +1,27 @@
 <% provide :title, "Categories" %>
 
 <h1><%= link_to "Add new category", new_category_path %></h1>
-<table> 
-  <thead>
-    <tr>
-      <th width="200">Category name</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @categories.each do |category| %>
-    <tr>
-      <td><%= category.name %></td>
-      <td><%= link_to "edit", edit_category_path(category) %></td>
-      <td><%= link_to "delete", category_path(category), 
-                      method: :delete, data: { confirm: 'Are you sure?' } %></td>      
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  
+<% if @categories.empty? %>
+  <h6>No categories added yet<h6>
+<% else %>
+  <table> 
+    <thead>
+      <tr>
+        <th width="200">Category name</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to "edit", edit_category_path(category) %></td>
+        <td><%= link_to "delete", category_path(category), 
+                        method: :delete, data: { confirm: 'Are you sure?' } %></td>      
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

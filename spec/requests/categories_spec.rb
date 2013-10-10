@@ -59,6 +59,7 @@ describe "Categories" do
       visit "/admin/categories/"
       page.should have_title('Categories')
       expect { first(:link, "delete").click }.to change(Category, :count).by(-1)
+      current_path.should == "/admin/categories"
     end
 
     it "should destroy associated products" do

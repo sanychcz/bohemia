@@ -6,6 +6,7 @@ class AdminController < ApplicationController
   def admin_home
     @users = User.all
     @categories = Category.all
+    @news = New.all
   end
 
   def admin_categories
@@ -14,5 +15,9 @@ class AdminController < ApplicationController
 
   def admin_products
     @products = Product.all
+  end
+
+  def admin_news
+    @news = New.all
   end
 end

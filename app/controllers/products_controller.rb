@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   
-  before_action :find_product, only: [:show, :edit, :update, :destroy]
+  before_action :find_product, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
   layout :resolve_layout
 
@@ -36,20 +36,19 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if @product.destroy
-      redirect_to "/admin/products"
-    end
+    @product.destroy
+    redirect_to "/admin/products"
   end
 
   private
 
     def product_params
-      params.require(:product).permit(:name, :description, :features, :category_ids)
+      params.require(:product).permit(:name, :description, :features, :category_id)
     end
 
     def resolve_layout
       case action_name
-      when "new", "create", "edit"
+      when "new", "create", "edit", "destroy", "update"
         "admin"
       else
         "application"

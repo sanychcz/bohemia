@@ -64,6 +64,7 @@ describe "Products" do
       visit "/admin/products/"
       page.should have_title('Products')
       expect { first(:link, "delete").click }.to change(Product, :count).by(-1)
+      current_path.should == "/admin/products"
     end
   end
 end

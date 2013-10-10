@@ -3,22 +3,26 @@
 
 <h1><%= link_to "Add new product", new_product_path %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th width="200">Product name</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <% @products.each do |product| %>
-    <tbody>
+<% if @products.empty? %>
+  <h5>No products added yet<h5>
+<% else %>    
+  <table>
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= link_to "edit", edit_product_path(product) %></td>
-        <td><%= link_to "delete", product_path(product), 
-                                  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th width="200">Product name</th>
+        <th></th>
+        <th></th>
       </tr>
-    </tbody>
-  <% end %>
-</table>    
+    </thead>
+    <% @products.each do |product| %>
+      <tbody>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= link_to "edit", edit_product_path(product) %></td>
+          <td><%= link_to "delete", product_path(product), 
+                                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>    
+<% end %>
