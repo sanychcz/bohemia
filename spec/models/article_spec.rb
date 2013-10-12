@@ -12,4 +12,14 @@ describe Article do
 
   it { should be_valid }
 
+  describe "when title is not present" do
+    before { @article.title = "" }
+    it { should_not be_valid }
+  end
+
+  describe "when content is not present" do
+    before { @article.content = "" }
+    it { should_not be_valid }
+  end
+
 end

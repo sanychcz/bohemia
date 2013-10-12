@@ -1,0 +1,27 @@
+<% provide :title, "Articles" %>
+
+<h1><%= link_to "Add new article", new_article_path %></h1>
+
+<% if @articles.empty? %>
+  <h5>No articles added yet<h5>
+<% else %>    
+  <table>
+    <thead>
+      <tr>
+        <th width="200">Article title</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <% @articles.each do |article| %>
+      <tbody>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= link_to "edit", edit_article_path(article) %></td>
+          <td><%= link_to "delete", article_path(article), 
+                                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>    
+<% end %>

@@ -8,13 +8,12 @@ Bohemia::Application.routes.draw do
   get "/users/sign_out" => "sessions#destroy"
 
   devise_for :users
-  resources :users
-  resources :categories
-  resources :products
+  resources :users, :categories, :products, :articles
 
   get '/admin' => "admin#admin_home"
   get 'admin/products' => "admin#admin_products"
   get 'admin/categories' => "admin#admin_categories"
+  get 'admin/articles' => "admin#admin_articles"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -19,7 +19,7 @@ FactoryGirl.define do
   end
 
   factory :article do
-    name "article title"
+    title "article title"
     content "article content"
   end
 end

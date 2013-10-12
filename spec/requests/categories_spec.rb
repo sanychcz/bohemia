@@ -21,7 +21,7 @@ describe "Categories" do
         it { should have_content('error') }
       end
 
-      it "has to log in before create a post" do
+      it "has to log in before create a category" do
         logout
         visit new_category_path
         page.should have_title('Sign in')
