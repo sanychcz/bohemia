@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_action :find_article, only: [:edit, :update, :destroy]
+  before_action :find_article, only: [:edit, :update, :destroy, :show]
   before_action :authenticate_user!
   layout :resolve_layout
 
@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -47,7 +48,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :content)
+      params.require(:article).permit(:title, :content, photos_attributes: [:id,:name,:image, :photoable_id, :photoable_type, :_destroy] )
     end
 
     def resolve_layout

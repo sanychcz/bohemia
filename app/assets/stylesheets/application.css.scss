@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+ *= require_tree .
+ */
+ 
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  width: 1106px;
+}
+
+body.app-layout {
+  background-color: red;
+}
+
+#cleaner {
+  clear: both;
+}
+
+/* Language bar */
+ 
+ #language-bar {
+  height: 45px;
+  width: 1106px;
+  margin: 0 auto;
+  background-color: black;
+ }
+
+ #language-selection {
+  height: 45px;
+  width: 1106px;
+  float: right;
+  z-index: 100;
+  color:white;
+  margin: 0;
+  background-color: black;
+ }
+
+/* Header */
+
+ #header {
+  margin: 0 auto;
+  width: 1106px;
+  height: 200px;
+  background-color: #5bccff;
+ }
+
+ #header-logo {
+  float:left;
+  position: relative;
+  margin: 30px 50px;
+ }
+
+ #header-contact {
+  float: right;
+  position: relative;
+  margin: 30px 50px;
+ }
+
+ /* Navigation */
+
+ #navigation {
+  margin: 0 auto;
+  width: 1106px;
+  height: 60px;
+ }
+
+ #navigation-menu {
+  padding: 10px;
+  position: relative;
+  margin: auto;
+  width: 1106px;
+  height: 60px;
+  background-color: white;
+ }
+
+ #navigation-menu ul {
+   background-color: #ff9e00;
+   margin: 10px auto;
+   width:900px;
+   height: auto;
+  }
+
+#navigation-menu ul li {
+  background-color: #ffd792;
+  display: inline-block;
+  margin: 0 30px 0 0;
+ }
+
+ /* Central container */
+
+#central-box {
+  margin: 0 auto;
+  width: 1106px;
+  height: 300px;
+  background-color: #e2f0b6;
+}
+
+#main-content {
+  margin: 0 auto;
+  width: 1106px;
+  height: auto;
+  background-color: white;
+}
+
+/* Download container */
+
+#download {
+  margin: 0 auto;
+  width: 1106px;
+  height: 100px;
+  background-color: #2097db;
+}
+
+/* Footer */
+
+#footer {
+  margin: 0 auto;
+  width: 1106px;
+  height: 300px;
+  background-color: #152f48;
+}
+
+#footer-contact {
+  float:left;
+  width:30%;
+}
+
+#footer-sitemap {
+  float:left;
+  width:30%;
+}
+
+#footer-iformation {
+  float:right;
+  width:40%;
+}

@@ -9,6 +9,8 @@
     <thead>
       <tr>
         <th width="200">Article title</th>
+        <th>Image</th>
+        <th>Image name</th>
         <th></th>
         <th></th>
       </tr>
@@ -16,7 +18,13 @@
     <% @articles.each do |article| %>
       <tbody>
         <tr>
-          <td><%= article.title %></td>
+          <td><%= article.title %></td>          
+          <% article.photos.each do |p| %>
+            <% if p.image? %>
+              <td><%= image_tag p.image_url(:thumb) %></td>
+            <% end %>  
+            <td><%= p.name %></td>
+          <% end %>          
           <td><%= link_to "edit", edit_article_path(article) %></td>
           <td><%= link_to "delete", article_path(article), 
                                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +33,4 @@
     <% end %>
   </table>    
 <% end %>
+

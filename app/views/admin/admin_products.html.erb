@@ -12,12 +12,18 @@
         <th width="200">Product name</th>
         <th></th>
         <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <% @products.each do |product| %>
       <tbody>
         <tr>
           <td><%= product.name %></td>
+          <% product.photos.each do |p| %>
+            <td><%= image_tag p.image_url(:thumb).to_s %></td>
+            <td><%= p.name %></td>
+          <% end %> 
           <td><%= link_to "edit", edit_product_path(product) %></td>
           <td><%= link_to "delete", product_path(product), 
                                     method: :delete, data: { confirm: 'Are you sure?' } %></td>

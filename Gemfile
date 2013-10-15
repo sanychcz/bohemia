@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'globalize3'
 gem 'carrierwave'
 gem 'rmagick'
+gem "nested_form"
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'

@@ -6,4 +6,6 @@ class Product < ActiveRecord::Base
   validates :category_id, presence: true
 
   belongs_to :category
+  has_many :photos, :as => :photoable
+  accepts_nested_attributes_for :photos, :allow_destroy => true
 end

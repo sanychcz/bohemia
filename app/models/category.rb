@@ -4,4 +4,8 @@ class Category < ActiveRecord::Base
   validates :description, presence: true
 
   has_many :products, dependent: :destroy
+  has_many :photos, :as => :photoable
+  has_many :documents, :as => :documentable
+  accepts_nested_attributes_for :photos, :allow_destroy => true
+  accepts_nested_attributes_for :documents, :allow_destroy => true
 end

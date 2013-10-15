@@ -43,7 +43,8 @@ class ProductsController < ApplicationController
   private
 
     def product_params
-      params.require(:product).permit(:name, :description, :features, :category_id)
+      params.require(:product).permit(:name, :description, :features, :category_id, 
+                                      photos_attributes: [:id,:name,:image, :photoable_id, :photoable_type, :_destroy])
     end
 
     def resolve_layout

@@ -47,7 +47,9 @@ class CategoriesController < ApplicationController
     end
 
     def category_params
-      params.require(:category).permit(:name, :description)
+      params.require(:category).permit(:name, :description, 
+                      photos_attributes: [:id,:name,:image, :photoable_id, :photoable_type, :_destroy],
+                      documents_attributes: [:id,:name,:doc, :documentable_id, :documentable_type, :_destroy])
     end
 
     def resolve_layout

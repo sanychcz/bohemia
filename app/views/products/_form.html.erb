@@ -1,9 +1,24 @@
 <div class="row">
-  <%= simple_form_for @product do |f| %>
+  <%= simple_nested_form_for @product do |f| %>
     <p><%= f.association :category, collection: Category.all, :include_blank => false %></p>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :features %>     
+    <%= f.input :features %>
+
+    <%= f.fields_for :photos do |p| %>
+     <div class="panel">
+        <p><%= p.input :name %></p>        
+        <p><%= image_tag p.object.image_url(:thumb) %>
+        <%= p.link_to_remove "Remove photo" %></p>         
+        <p><%= p.file_field :image %> </p>
+      </div>  
+    <% end %>
+
+    <p><%= f.link_to_add "Add a photo", :photos %></p>    
+         
     <%= f.button :submit, "Save" %>
   <% end %>    
 </div>
+
+
+

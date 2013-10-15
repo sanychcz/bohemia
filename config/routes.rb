@@ -1,19 +1,47 @@
 Bohemia::Application.routes.draw do
 
-  root 'pages#home'
-  
-  get "about" => "pages#about"
-  get "contact" => "pages#contact"
+  scope "(:locale)", locale: /en|ru|cs/ do 
 
-  get "/users/sign_out" => "sessions#destroy"
+    root 'pages#home'
+    
+    get "about" => "pages#about"
+    get "contact" => "pages#contact"
 
-  devise_for :users
-  resources :users, :categories, :products, :articles
+    get "/users/sign_out" => "sessions#destroy"
 
-  get '/admin' => "admin#admin_home"
-  get 'admin/products' => "admin#admin_products"
-  get 'admin/categories' => "admin#admin_categories"
-  get 'admin/articles' => "admin#admin_articles"
+    devise_for :users
+
+  end
+
+  scope "/:locale", locale: /en|ru|cs/ do
+
+    resources :users
+
+    resources :articles do
+      resources :photos
+      resources :documents
+    end
+
+    resources :products do
+      resources :photos
+      resources :documents
+    end
+
+    resources :categories do
+      resources :photos
+      resources :documents
+    end 
+  end
+
+  scope "(:locale)", locale: /en|ru|cs/ do 
+
+    get '/admin' => "admin#admin_home"
+    get 'admin/products' => "admin#admin_products"
+    get 'admin/categories' => "admin#admin_categories"
+    get 'admin/articles' => "admin#admin_articles"
+
+  end  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

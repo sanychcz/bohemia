@@ -1,8 +1,30 @@
 <div class="row">
-  <%= simple_form_for @category do |f| %>
+  <%= simple_nested_form_for @category do |f| %>
     <%= render 'shared/error_message', object: f.object %>
     <%= f.input :name %>
     <%= f.input :description %>
+
+    <%= f.fields_for :photos do |p| %>
+      <div class="panel">
+        <p><%= p.input :name %></p>
+        <p><%= image_tag p.object.image_url(:thumb) %>
+        <%= p.link_to_remove "Remove photo" %></p>
+        <p><%= p.file_field :image %> </p>
+      </div>
+    <% end %>
+    
+    <p><%= f.link_to_add "Add a photo", :photos %></p>
+
+    <%= f.fields_for :documents do |d| %>
+      <div class="panel">
+        <p><%= d.input :name %></p>
+        <p><%= d.link_to_remove "Remove document" %></p>
+        <p><%= d.file_field :doc %> </p>
+      </div>
+    <% end %>
+
+    <p><%= f.link_to_add "Add a doc", :documents %></p>
+
     <%= f.submit "Save", :class => "button" %>
    <% end %> 
 </div>

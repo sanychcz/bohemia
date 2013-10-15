@@ -9,6 +9,10 @@
     <thead>
       <tr>
         <th width="200">Category name</th>
+        <th>Image</th>
+        <th>Document</th>
+        <th></th>
+        <th></th>
         <th></th>
         <th></th>
       </tr>
@@ -16,7 +20,17 @@
     <tbody>
       <% @categories.each do |category| %>
       <tr>
-        <td><%= category.name %></td>
+        <td><%= category.name %></td>       
+        <td>
+          <% category.photos.each do |p| %>
+            <%= image_tag p.image_url(:thumb).to_s %>
+          <% end %>
+        </td>
+        <td>
+          <% category.documents.each do |d| %>
+            <%= link_to d.name, d.doc_url %>
+          <% end %>
+        </td>
         <td><%= link_to "edit", edit_category_path(category) %></td>
         <td><%= link_to "delete", category_path(category), 
                         method: :delete, data: { confirm: 'Are you sure?' } %></td>      

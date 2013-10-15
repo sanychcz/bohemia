@@ -17,6 +17,8 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "lang" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -35,7 +37,7 @@
         </div>
       </div>
     <% end %>
+
     
-    <%= javascript_include_tag "application" %>
   </body>
 </html>

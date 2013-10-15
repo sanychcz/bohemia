@@ -1,6 +1,20 @@
 <section id="language-bar">
   <section id="language-selection">
-    Selection
+     <nav class="top-bar">
+       <section class="top-bar-section">
+        <ul class="right">
+          <li class="has-dropdown"><a href=""><%= I18n.locale %></a>
+            <ul class="dropdown">
+              <% I18n.available_locales.each do |loc| %>
+                <% unless I18n.locale == loc  %>
+                  <li><%= link_to "#{loc.upcase}", :locale => loc %></li>
+                <% end %>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+       </section>  
+     </nav>
   </section>
   <div id="cleaner"></div>
 </section>
