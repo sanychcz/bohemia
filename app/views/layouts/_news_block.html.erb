@@ -1,0 +1,19 @@
+Our news:
+
+<section id="main-inner-news-container">
+  <% @articles.each do |article| %>
+    <section class="main-news-item">
+      <% article.photos.each do |photo| %>
+      <div class="main-news-item-photo">
+        <%= image_tag photo.image_url(:thumb).to_s %>
+      </div>        
+      <% end %>
+      <div class="main-news-item-desc">
+        <p class="news-item-date"><%= article.created_at.strftime("%d.%m.%y") %></p>
+        <p class="news-item-title"><%= article.title %></p>
+        <p class="news-item-desc"><%= article.title %></p>
+      </div>
+    </section>
+    <section id="cleaner"></section>
+  <% end %>
+</section>

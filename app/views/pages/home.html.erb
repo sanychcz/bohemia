@@ -1,5 +1,19 @@
 <% provide :title, "Home" %>
 
-Main content
+<section id="main-categories">
+  <%= render 'layouts/categories_block' %>
+</section>
 
-<%= render 'layouts/download' %>
+<section id="main-news-products-container">
+  <section id="main-news">
+    <%= render 'layouts/news_block' %>
+  </section>
+  <section id="main-products">
+    <%= render 'layouts/products_block' %>
+  </section>  
+  <section id="cleaner"></section>
+</section>
+
+<section id="main-downloads">
+  <%= render 'layouts/download' %>
+</section>

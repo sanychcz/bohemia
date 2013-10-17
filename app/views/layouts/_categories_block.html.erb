@@ -1,0 +1,14 @@
+<p>What we offer:</p>
+
+<% @categories.each do |category| %>
+  <div class="category-item">
+    <div class="category-item-image">
+      <% category.photos.each do |photo| %>
+        <%= image_tag photo.image_url(:thumb).to_s %>
+      <% end %>
+    </div>
+    <div class="category-item-name">  
+      <%= link_to category.name.upcase, category_path(category) %>
+    </div>
+  </div>
+<% end %>
