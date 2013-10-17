@@ -7,5 +7,7 @@ class Product < ActiveRecord::Base
 
   belongs_to :category
   has_many :photos, :as => :photoable
+  has_many :documents, :as => :documentable
   accepts_nested_attributes_for :photos, :allow_destroy => true
+  accepts_nested_attributes_for :documents, :allow_destroy => true
 end

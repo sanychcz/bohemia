@@ -10,13 +10,18 @@
  *
  *= require_self
  *= require foundation_and_overrides
+ *= require fonts
  *= require_tree .
  */
  
+@import "fonts";
+
 html, body {
   margin: 0 auto;
   padding: 0;
   width: 1106px;
+  font-family: 'pt_sans_narrowregular';
+  font-weight: normal;
 }
 
 body.app-layout {
@@ -53,6 +58,7 @@ body.app-layout {
   width: 1106px;
   height: 200px;
   background-color: #5bccff;
+  font-family: 'pt_sans_narrowregular';
  }
 
  #header-logo {
