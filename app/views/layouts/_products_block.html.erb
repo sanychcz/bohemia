@@ -1,15 +1,15 @@
-Featured products:
+<p class="products-main-slogan">FEATURED PRODUCTS:</p>
 
 <section id="main-inner-products-container">
   <% @products.each do |product| %>
     <section class="main-products-item">
       <% product.photos.each do |photo| %>
         <div class="main-products-item-photo">
-          <%= image_tag photo.image_url(:thumb).to_s %>
+          <%= image_tag photo.image_url(:prod_main_thumb).to_s %>
         </div> 
       <% end %>
       <div class="main-products-item-desc">
-        <p class="products-item-name"><%= product.name %></p>
+        <p class="products-item-name"><%= link_to product.name, product_path(product) %></p>
         <p class="products-item-desc"><%= product.name %></p>
       </div> 
     </section>
