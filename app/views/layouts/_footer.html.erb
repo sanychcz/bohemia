@@ -1,25 +1,37 @@
 <footer id="footer">
-  <section id="footer-contact">
-    <p class="footer-title">CONTACT<p>
-      <ul>
-        <li>+420 111 222 333</li>
-        <li>+420 111 222 333</li>
-        <li><%= mail_to "info@suck.com" %></li>
-      </ul>
-  </section>
-  <section id="footer-sitemap">
-    <p class="footer-title">SITEMAP</p>
-      <ul>
-        <li><%= link_to "ABOUT US", about_path %></li>
-        <li><%= link_to "NEWS",     root_url %></li>
-        <li><%= link_to "PRODUCTS", root_url %></li>
-        <li><%= link_to "DOWNLOAD", download_path %></li>
-        <li><%= link_to "CONTACTS", contact_path %></li>
-      </ul>
-  </section>
-  <section id="footer-inforamtion">
-    <p class="footer-title">INFORMATION</p>
-      <p><%= image_tag "logo.png" %></p>
+  <section id="footer-inner">
+    <section id="footer-contact">
+      <p class="footer-title">CONTACT<p>
+        <ul>
+          <li>+420 111 222 333</li>
+          <li>+420 111 222 333</li>
+          <li><%= mail_to "info@suck.com" %></li>
+          <li style="width:300px; padding-top: 10px;">
+            <div class="footer-li-item">
+              <table style="width:260px;">
+                <tr>
+                  <td style="width:120px;">K Vypichu 1308 25219 RUDNÁ</td>
+                  <td style="width:140px;"><%= link_to "Show on map", root_url, {:class => "ext-button"} %></td>
+                </tr>
+              </table>              
+            </div>
+          </li>
+        </ul>
+    </section>
+    <section id="footer-sitemap">
+      <p class="footer-title">SITEMAP</p>
+        <ul>
+          <li><%= link_to "ABOUT US", about_path %></li>
+          <li><%= link_to "NEWS",     articles_path %></li>
+          <li><%= link_to "PRODUCTS", products_path %></li>
+          <li><%= link_to "DOWNLOAD", download_path %></li>
+          <li><%= link_to "CONTACTS", contact_path %></li>
+        </ul>
+    </section>
+    <section id="footer-information">
+      <p class="footer-title">INFORMATION</p>
+        <p><%= image_tag "logo.png" %></p>
+    </section>
   </section>
   <div id="cleaner"></div>
 </footer>

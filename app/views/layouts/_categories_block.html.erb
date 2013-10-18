@@ -4,7 +4,7 @@
   <div class="category-item">
     <div class="category-item-image">
       <% category.photos.each do |photo| %>
-        <%= image_tag photo.image_url(:thumb).to_s %>
+        <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
       <% end %>
     </div>
     <div class="category-item-name">  

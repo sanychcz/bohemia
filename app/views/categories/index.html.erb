@@ -1,26 +1,21 @@
 <% provide :title, "All categories" %>
 
-<section id="index-articles">
+<section id="index-categories">
 
-  <h3>OUR NEWS</h3>
+  <h3>WHAT WE OFFER</h3>
 
-  <section id="index-articles-inner">
-    <% @articles.each do |article| %>
-      <section class="index-article-item">
-        <% article.photos.each do |photo| %>
-          <div class="index-article-photo"><%= image_tag photo.image_url(:thumb).to_s %></div>
+  <section id="index-categories-inner">
+    <% @categories.each do |category| %>
+      <section class="index-category-item">
+        <% category.photos.each do |photo| %>
+          <div class="index-category-photo"><%= image_tag photo.image_url(:cat_main_thumb).to_s %></div>
         <% end %>
-        <div class="index-article-description">
-          <div class="index-article-date"><%= article.created_at.strftime("%d.%m.%y") %></div>
-          <div class="index-article-title"><%= link_to article.title, article_path(article) %></div>
-          <div class="index-article-content"><%= article.content %></div>
+        <div class="index-category-description">
+          <div class="index-category-title"><%= link_to category.name.upcase, category_path(category) %></div>
+          <div class="index-category-content"><%= category.description %></div>
         </div>
-        <div id="cleaner">
       </section>
-      <hr />
     <% end %>
-    <section id="index-articles-paginator">
-      <%= paginate @articles %>
-    </section> 
+    <div id="cleaner">
   </section>
 </section>
