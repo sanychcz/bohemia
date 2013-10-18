@@ -13,6 +13,7 @@ gem 'globalize3'
 gem 'carrierwave'
 gem 'rmagick'
 gem "nested_form"
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'

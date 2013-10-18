@@ -61,7 +61,7 @@
     padding-left: 37.5px;
     background-color: #ccdedd;
     float:left;
-    width:333.5px;
+    width:362.5px;
     height: 630px;
     .news-main-slogan {
       font-size: 20px;
@@ -72,7 +72,7 @@
   #main-products {
     background-color: #e8ffb8;
     float:right;
-    width:689px;
+    width:660px;
     height: 630px;
     .products-main-slogan {
       font-size: 20px;
@@ -88,7 +88,7 @@
 
     .main-news-item-photo{
       float:left;
-      padding: 10px 5px 10px 0px;
+      padding: 10px 10px 10px 0px;
       img {
         width: 110px;
         height: 110px;        
@@ -97,20 +97,25 @@
 
     .main-news-item-desc{
       float: right;
-      padding: 10px 10px 10px 5px;
+      padding: 10px 10px 10px 10px;
       height: 110px;
-      width: 166px;
+      width: 205px;
       .news-item-date{
-        margin: 0;
+        margin: 0px 0px 5px 0px;
+        font-size: 12px;
       }
       .news-item-title{
-        margin: 0;
+        margin: 0px 0px 5px 0px;
+        line-height:90%;
         a {
           text-decoration: underline;
+          font-size: 14px;                    
         }
       }
       .news-item-desc{
         margin: 0;
+        line-height:90%;
+        font-size: 14px;
       }
     }
   }

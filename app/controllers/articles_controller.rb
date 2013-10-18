@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   layout :resolve_layout
 
   def index
-    @articles = Article.all
+    @articles = Article.order("created_at DESC").page(params[:page]).per(4)
   end
 
   def show

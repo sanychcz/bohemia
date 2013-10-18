@@ -6,6 +6,7 @@ Bohemia::Application.routes.draw do
     
     get "about" => "pages#about"
     get "contact" => "pages#contact"
+    get "download" => "pages#download"
 
     get "/users/sign_out" => "sessions#destroy"
 

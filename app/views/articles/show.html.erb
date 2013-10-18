@@ -1,3 +1,15 @@
-<div class="row">
-	<%= @article.title %>
-</div>
+<% provide :title, @article.title %>
+
+<section id="show-article">
+
+  <h3>OUR NEWS</h3>
+  
+  <section id="show-article-inner">
+    <section id="show-article-title"><%= @article.title %></section>
+    <% @article.photos.each do |photo| %>
+      <section id="show-article-photo"><%= image_tag photo.image_url(:news_inner_thumb).to_s %></section>
+    <% end %>
+    <section id="show-article-content"><%= @article.content %></section> 
+  </section>
+  <div id="cleaner">
+</section>
