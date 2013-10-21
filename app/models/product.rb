@@ -10,4 +10,6 @@ class Product < ActiveRecord::Base
   has_many :documents, :as => :documentable
   accepts_nested_attributes_for :photos, :allow_destroy => true
   accepts_nested_attributes_for :documents, :allow_destroy => true
+
+  scope :recent_products, -> { order("created_at DESC").limit(3) }
 end

@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def home
     @categories = Category.all 
     @articles = Article.recent
-    @products = Product.all
+    @products = Product.recent_products
   end
 
   def contact

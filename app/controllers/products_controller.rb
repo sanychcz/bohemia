@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   
-  before_action :find_product, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :find_product, only: [:edit, :update, :destroy, :show]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
   layout :resolve_layout
 
   def index

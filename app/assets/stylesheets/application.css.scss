@@ -176,7 +176,7 @@ body.app-layout {
 #footer {
   margin: 0 auto;
   width: 1060px;
-  height: 300px;
+  height: 350px;
   background-color: #152f48;
 }
 
@@ -198,8 +198,24 @@ body.app-layout {
 
 #footer-information {
   float:right;
-  width:364px;
-  text-align:right;
+  width:150px;
+  text-align:left;
+  img {
+    display:block;
+    margin:0 px;
+    width:105px;
+  }
+  #footer-image-title {
+    color: white;
+    margin: 10px 0;
+    font-size:80%;
+  }
+  #footer-copyright {
+    ul li {
+      font-size: 70%;
+      color: #2097DB;
+    }
+  }
 }
 
 #footer {
@@ -234,30 +250,30 @@ body.app-layout {
           color:#ffffff; 
           background:#53bff9; 
           -webkit-box-shadow:0px 5px 0px #3396e7;  -moz-box-shadow: 0px 5px 0px #3396e7;  box-shadow:0px 5px 0px #3396e7;  
-          }
+        }
 
-          .ext-button:hover {
-            padding:12px 22px; 
-            border:none; 
-            -webkit-border-radius:4px;
-            -moz-border-radius:4px; 
-            border-radius: 4px; 
-            font:14px; 
-            color:#ffffff; 
-            background:#53bff9; 
-            -webkit-box-shadow:0px 5px 0px #3396e7;  -moz-box-shadow: 0px 5px 0px #3396e7;  box-shadow:0px 5px 0px #3396e7;  
-          }
+        .ext-button:hover {
+          padding:12px 22px; 
+          border:none; 
+          -webkit-border-radius:4px;
+          -moz-border-radius:4px; 
+          border-radius: 4px; 
+          font:14px; 
+          color:#ffffff; 
+          background:#53bff9; 
+          -webkit-box-shadow:0px 5px 0px #3396e7;  -moz-box-shadow: 0px 5px 0px #3396e7;  box-shadow:0px 5px 0px #3396e7;  
+        }
 
-          .ext-button:active {
-            padding:12px 22px; 
-            border:none; 
-            -webkit-border-radius:4px;
-            -moz-border-radius:4px; 
-            border-radius: 4px; 
-            font:14px; 
-            color:#ffffff; 
-            background:#3396e7; 
-          }
+        .ext-button:active {
+          padding:12px 22px; 
+          border:none; 
+          -webkit-border-radius:4px;
+          -moz-border-radius:4px; 
+          border-radius: 4px; 
+          font:14px; 
+          color:#ffffff; 
+          background:#3396e7; 
+        }
       }  
     }
   }

@@ -57,6 +57,7 @@
 #main-news-products-container {
   width:1022.5px;
   margin: 0 0px 30px 0px;
+
   #main-news {
     padding-left: 37.5px;
     background-color: #ccdedd;
@@ -77,6 +78,7 @@
     .products-main-slogan {
       font-size: 20px;
       padding-top: 20px;
+      padding-left: 20px;
       margin-bottom: 20px;
     }
   }  
@@ -122,12 +124,16 @@
 }
 
 #main-inner-products-container {
+  padding-left:20px;
+  width:660px;
+  height:170px;
+
   .main-products-item {
     height:170px;
 
     .main-products-item-photo {
       float:left;
-      padding: 10px 5px 10px 10px;
+      padding: 10px 10px 10px 0px;
       img {
         width: 200px;
         height: 150px;        
@@ -135,9 +141,9 @@
     }
     .main-products-item-desc {
       float: right;
-      padding: 10px 10px 10px 5px;
+      padding: 10px 10px 10px 10px;
       height: 170px;
-      width: 402.5px;
+      width: 430px;
       .products-item-name{
         margin: 0;
       }

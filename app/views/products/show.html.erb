@@ -1,0 +1,25 @@
+<% provide :title, @product.name %>
+
+<section id="show-product-container">
+  <h3><%= link_to "WHAT WE OFFER:", categories_path %> <%= link_to @product.category.name.upcase, @product.category %> : <%= @product.name.upcase %></h3>
+
+  <section id="show-product-inner">
+    <section id="show-product-inner-gallery">
+      <% @product.photos.each do |photo| %>
+        <section id="show-product-main-photo">
+          <%= image_tag photo.image_url(:prod_show_thumb).to_s %>
+        </section>
+      <section id="show-product-thumb-photos">
+        <ul class="clearing-thumbs" data-clearing>
+          <li><%= link_to image_tag(photo.image_url(:thumb).to_s), photo.image_url %></li>
+        </ul>
+      </section>
+      <% end %>
+    </section>
+    <section id="show-product-inner-details">
+      
+    </section>
+    <section id="cleaner"></section>
+  </section>
+
+</section>
