@@ -4,7 +4,7 @@
     <p><%= f.association :category, collection: Category.all, :include_blank => false %></p>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :features %>
+    <%= f.input :features, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
 
     <%= f.fields_for :photos do |p| %>
      <div class="panel">
@@ -12,6 +12,7 @@
         <p><%= image_tag p.object.image_url(:thumb) %>
         <%= p.link_to_remove "Remove photo" %></p>         
         <p><%= p.file_field :image %> </p>
+        <p><%= p.input :main, :as => :boolean %> </p>
       </div>  
     <% end %>
 

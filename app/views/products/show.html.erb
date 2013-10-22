@@ -6,18 +6,26 @@
   <section id="show-product-inner">
     <section id="show-product-inner-gallery">
       <% @product.photos.each do |photo| %>
-        <section id="show-product-main-photo">
-          <%= image_tag photo.image_url(:prod_show_thumb).to_s %>
-        </section>
-      <section id="show-product-thumb-photos">
-        <ul class="clearing-thumbs" data-clearing>
-          <li><%= link_to image_tag(photo.image_url(:thumb).to_s), photo.image_url %></li>
-        </ul>
-      </section>
+        <% if photo.main? %>
+          <section id="show-product-main-photo">
+            <%= image_tag photo.image_url(:prod_show_thumb).to_s %>
+          </section>
+        <% end %>
+          <section class="show-product-thumb-photos">
+            <%= link_to image_tag(photo.image_url(:small_thumb)), photo.image_url, class: "gallery" %>
+          </section>
       <% end %>
     </section>
     <section id="show-product-inner-details">
-      
+      <div id="show-product-title"><%= @product.name.upcase %></div>
+      <div id="show-product-desc"><%= @product.description %></div>
+      <p>KEY FEATURES</p>
+      <div id="show-product-features"><%= raw(@product.features) %></div>
+      <div id="show-product-download">
+        <% @product.documents.each do |doc| %>
+          <%= link_to "doc.name", doc.doc_url %>
+        <% end %>
+      </div>
     </section>
     <section id="cleaner"></section>
   </section>

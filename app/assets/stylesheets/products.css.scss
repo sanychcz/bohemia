@@ -19,8 +19,7 @@
     float:left;
     width:415px;
     margin-right:30px;
-    border: 1px solid;
-    padding:20px;
+
     background-color: #dfdfdf;
 
     #show-product-main-photo {
@@ -31,10 +30,34 @@
       }
     }
 
+    width: 375px;
+    .show-product-thumb-photos {
+      display:inline;
+      img {
+        width:71px;
+        height:70px;
+      }
+    }
   }
+
   #show-product-inner-details {
     float:right;
-    width:555px;
-    border: 1px solid;
+    width:595px;
+    p {
+      margin:10px 0;
+      color: #2BA6CB;
+    }
+
+    #show-product-title {
+      font-size: 20px;
+      margin-bottom:5px;
+      color: #2BA6CB;
+    }
+    #show-product-desc {
+    }
+    #show-product-features {
+      padding-left:20px;
+    }
+    #show-product-download {}
   }  
 }

@@ -14,6 +14,8 @@ gem 'carrierwave'
 gem 'rmagick'
 gem "nested_form"
 gem 'kaminari'
+gem 'ckeditor_rails'
+gem "ckeditor"
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
@@ -29,6 +31,8 @@ gem 'zurb-foundation', '~> 4.0.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
+gem 'jquery-colorbox-rails'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do

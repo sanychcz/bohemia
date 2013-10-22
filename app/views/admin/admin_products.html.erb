@@ -21,8 +21,10 @@
         <tr>
           <td><%= product.name %></td>
           <% product.photos.each do |p| %>
-            <td><%= image_tag p.image_url(:thumb).to_s %></td>
-            <td><%= p.name %></td>
+            <% if p.main? %>
+              <td><%= image_tag p.image_url(:thumb).to_s %></td>
+              <td><%= p.name %></td>
+            <% end %>  
           <% end %> 
           <td><%= link_to "edit", edit_product_path(product) %></td>
           <td><%= link_to "delete", product_path(product), 

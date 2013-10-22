@@ -10,11 +10,16 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_self
 //= require jquery
+//= require jquery.colorbox
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require ckeditor-jquery
+//= require ckeditor_fix
+//= require ckeditor/init
 //= require foundation
 //= require jquery_nested_form
+
 //= require turbolinks
 //= require_tree .
 

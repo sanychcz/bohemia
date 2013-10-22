@@ -4,9 +4,11 @@
   <% @products.each do |product| %>
     <section class="main-products-item">
       <% product.photos.each do |photo| %>
-        <div class="main-products-item-photo">
-          <%= image_tag photo.image_url(:prod_main_thumb).to_s %>
-        </div> 
+        <% if photo.main? %>
+          <div class="main-products-item-photo">
+            <%= image_tag photo.image_url(:prod_main_thumb).to_s %>
+          </div>
+        <% end %>  
       <% end %>
       <div class="main-products-item-desc">
         <p class="products-item-name"><%= link_to product.name, product_path(product) %></p>
