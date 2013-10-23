@@ -10,7 +10,9 @@ describe "Products" do
 
   describe "product creation" do
   	before { FactoryGirl.create(:category) }
-    before { visit new_product_path }
+    before do 
+      visit new_product_path(locale: "en") 
+    end
 
     describe "with invalid information" do
 
@@ -25,7 +27,7 @@ describe "Products" do
 
       it "has to log in before create a product" do
         logout
-        visit new_product_path
+        visit new_product_path(locale: "en")
         page.should have_title('Sign in')
       end
     end
@@ -44,11 +46,12 @@ describe "Products" do
   end
 
   describe "edit product" do
+    before { FactoryGirl.create(:product) }
 
     it "should update product" do
       new_name = "new product"
       new_description = "description"
-      visit edit_product_path(product)
+      visit edit_product_path(locale: "en", id: product.id)
       fill_in "Name", with: new_name
       fill_in "Description", with: new_description
       click_button "Save"

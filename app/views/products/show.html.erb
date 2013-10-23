@@ -8,7 +8,7 @@
       <% @product.photos.each do |photo| %>
         <% if photo.main? %>
           <section id="show-product-main-photo">
-            <%= image_tag photo.image_url(:prod_show_thumb).to_s %>
+            <%= link_to image_tag(photo.image_url(:prod_show_thumb)), photo.image_url, class: "gallery" %>
           </section>
         <% end %>
           <section class="show-product-thumb-photos">
@@ -29,5 +29,4 @@
     </section>
     <section id="cleaner"></section>
   </section>
-
 </section>

@@ -24,7 +24,7 @@ html, body {
 }
 
 body.app-layout {
-  background-color: red;
+  background-color: #c9f1ff;
 }
 
 #cleaner {
@@ -121,27 +121,36 @@ body.app-layout {
   margin: 0 auto;
   width: 1060px;
   height: 485px;
-  background-color: #e2f0b6;
+  background-image: url('yeti_main.jpg');
+
 }
 
 #central-text-container {
   position:relative;
-  top: 40px;
-  left: 450px;
-  right: 10px;
+  top: 100px;
+  left: 400px;
   width: 580px;
+  opacity:0.8;  
 
-  h2 {
-    background-color: white;
+  #central-top-text {
+    background-color:rgba(255,0,0,0.5);
     width:580px;
-    padding: 10px;
-    margin-top: 0px;
+    margin: 0px 0px 10px 0px;
+    h3 {
+      color:white;
+      padding: 10px;
+      margin:0; 
+    }
   }
 
-  h3 {
-    background-color: blue;
+  #central-bottom-text {
+    background-color:rgba(4,45,111,0.7);
     width:420px;
-    padding: 10px;
+    h4 {
+      color:white;
+      padding: 10px;
+      margin:0;
+    }
   }
 }
 
@@ -155,6 +164,7 @@ body.app-layout {
   background-color: white;
 }
 
+
 /* Download container */
 
 #download {
@@ -163,8 +173,12 @@ body.app-layout {
   height: 200px;
   background-color: #2097db;
   
-  h2 {
+  h3 {
     text-align: center;
+    color: white;
+    margin:0px;
+    padding: 20px;
+    font-family: "pt_sansregular";
   }  
 }
 

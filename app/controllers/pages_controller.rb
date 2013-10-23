@@ -13,5 +13,6 @@ class PagesController < ApplicationController
   end
 
   def download
+    @documents = Document.all
   end
 end

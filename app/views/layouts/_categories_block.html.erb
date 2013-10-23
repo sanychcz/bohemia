@@ -7,8 +7,10 @@
         <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
       <% end %>
     </div>
-    <div class="category-item-name">  
-      <%= link_to category.name.upcase, category_path(category) %>
+    <div id="category-item-name-<%= category.id %>">
+      <div class="category-item-name-title">  
+        <%= link_to category.name.upcase, category_path(category) %>
+      </div>
     </div>
   </div>
 <% end %>

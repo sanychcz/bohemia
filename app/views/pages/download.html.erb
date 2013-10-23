@@ -12,22 +12,13 @@
       </tr>
     </thead>
     <tbody>
+      <% @documents.each do |doc| %>
       <tr>
-        <td>Content Goes Here</td>
-        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-        <td>Content Goes Here</td>
+        <td><%= doc.name %></td>
+        <td><%= doc.name %></td>
+        <td><%= link_to "download", doc.doc_url, class: "link-underline" %></td>
       </tr>
-      <tr>
-        <td>Content Goes Here</td>
-        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-        <td>Content Goes Here</td>
-      </tr>
-      <tr>
-        <td>Content Goes Here</td>
-        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-        <td>Content Goes Here</td>
-      </tr>
+      <% end %>
     </tbody>
   </table>
-
 </div>

@@ -20,11 +20,8 @@
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
     <%= javascript_include_tag "lang" %>
-    <%= javascript_tag do -%>
-        $(document).ready(function(){
-          $("a.gallery").colorbox({});
-        });
-      <% end -%>
+    <%= javascript_include_tag "color_box" %>
+
     <%= csrf_meta_tags %>
   </head>
 

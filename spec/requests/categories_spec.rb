@@ -8,7 +8,9 @@ describe "Categories" do
   before(:each) { sign_in user}
 
   describe "category creation" do
-    before { visit new_category_path }
+    before do      
+      visit new_category_path(locale: "en") 
+    end
 
     describe "with invalid information" do
 
@@ -23,7 +25,7 @@ describe "Categories" do
 
       it "has to log in before create a category" do
         logout
-        visit new_category_path
+        visit new_category_path(locale: "en")
         page.should have_title('Sign in')
       end
     end
@@ -40,10 +42,11 @@ describe "Categories" do
   end
 
   describe "edit category" do
+    before { FactoryGirl.create(:category) }
 
     it "should update category" do
       new_name = "new category"
-      visit edit_category_path(category)
+      visit edit_category_path(locale: "en", id: category.id)
       fill_in "Name", with: new_name
       click_button "Save"
       page.should have_content(new_name)

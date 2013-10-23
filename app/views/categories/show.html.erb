@@ -7,9 +7,11 @@
       <% @category.products.each do |product| %>
       <div class="show-category-item">
         <% product.photos.each do |photo| %>
-          <div class="show-category-item-photo">
-            <%= image_tag photo.image_url(:prod_main_thumb).to_s %>
-          </div>
+          <% if photo.main? %>
+            <div class="show-category-item-photo">
+              <%= image_tag photo.image_url(:prod_main_thumb).to_s %>
+            </div>
+          <% end %>  
         <% end %>
         <div class="show-category-item-container">
           <div class="show-category-item-title">
@@ -19,7 +21,6 @@
             <%= product.description %>
           </div>
         </div>
-        <hr />
         <div id="cleaner"></div>        
       </div>      
       <% end %>  

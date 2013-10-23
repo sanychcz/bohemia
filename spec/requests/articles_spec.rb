@@ -8,7 +8,9 @@ describe "Articles" do
   before(:each) { sign_in user}
 
   describe "article creation" do
-    before { visit new_article_path }
+    before do
+     visit new_article_path(locale: "en")
+    end
 
     describe "with invalid information" do
 
@@ -23,7 +25,7 @@ describe "Articles" do
 
       it "has to log in before create a article" do
         logout
-        visit new_article_path
+        visit new_article_path(locale: "en")
         page.should have_title('Sign in')
       end
     end
@@ -40,10 +42,11 @@ describe "Articles" do
   end
 
   describe "edit article" do
+    before { FactoryGirl.create(:article) }
 
     it "should update article" do
       new_title = "new article"
-      visit edit_article_path(article)
+      visit edit_article_path(locale: "en", id: article.id)
       fill_in "Title", with: new_title
       click_button "Save"
       page.should have_content(new_title)

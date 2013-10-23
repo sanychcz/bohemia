@@ -58,6 +58,8 @@
   padding: 30px 0;
   h3 {
     margin: 0px;
+    font-weight: bold;
+    color: #53BFF9;
   }
 }
 
@@ -65,7 +67,7 @@
   #show-article-title{
     width:1000px;
     font-size: 20px;
-    color: red;
+    color: #00397a;
     display: block;
     padding: 15px 0;
   }
@@ -75,7 +77,7 @@
     padding-right:10px;
     img {
       width:250px;
-      height: 250px;      
+      height: 250px;
     }
   }
   #show-article-content{

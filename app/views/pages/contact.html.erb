@@ -1,13 +1,13 @@
 <% provide :title, "Contacts" %>
 
-<div class="row" style="padding-bottom:30px;">
-  <h4 style="padding-left:15px;">CONTACT US</h4>
-    <div class="large-6 columns">
+<div id="contact-container">
+  <h3 >CONTACT US</h3>
+    <div id="contact-map">
       <iframe width="450" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=K+Vypichu+130,+Rudn%C3%A1,+Czech+Republic&amp;aq=0&amp;oq=k+vypichu+130&amp;sll=37.0625,-95.677068&amp;sspn=42.581364,74.707031&amp;ie=UTF8&amp;hq=&amp;hnear=K+Vypichu,+Rudn%C3%A1,+Czech+Republic&amp;t=m&amp;ll=50.019101,14.202833&amp;spn=0.019302,0.038624&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
     </div>
 
-    <div class="large-6 columns">
-      <h3>H Service Bohemia s.r.o.</h3>
+    <div id="contact-details">
+      <div id="contact-company-title">H SERVICE BOHEMIA S.R.O.</div>
       <ul class="vcard" style="border:none; padding-left:0;">
         <li class="street-address">K Vypichu 1308</li>
         <li class="locality">252 19 RUNDÁ</li>
@@ -17,6 +17,6 @@
         <li class="email"><%= mail_to "info@pejsek.com" %></li>
       </ul>
     </div>
-  <p></p>
+  <div id="cleaner"></div>
 </div>
 
