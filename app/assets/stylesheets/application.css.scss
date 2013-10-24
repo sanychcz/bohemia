@@ -55,21 +55,21 @@ body.app-layout {
  #header {
   margin: 0 auto;
   width: 1060px;
-  height: 200px;
-  background-color: #5bccff;
+  height: 141px;
+  background-image: url("header_bg.png");
   font-family: 'pt_sans_narrowregular';
  }
 
  #header-logo {
   float:left;
   position: relative;
-  margin: 30px 50px;
+  margin: 10px 50px 0px 50px;
  }
 
  #header-contact {
   float: right;
   position: relative;
-  margin: 30px 100px;
+  margin: 25px 100px 0px 100px;
 
   h3 {
     color:white;
@@ -77,9 +77,11 @@ body.app-layout {
   }
   p {
     margin-top:5px;
+    text-align:right;
     a {
-    color: white;
-    text-decoration:underline;
+      color: white;
+      text-decoration:underline;
+      font-size: 16px;
     }
   }
  }

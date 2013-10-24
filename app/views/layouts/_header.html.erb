@@ -1,6 +1,6 @@
 <header id="header">
   <section id="header-logo">
-    <p><%= image_tag "logo_HBS.png" %></p>
+    <p><%= link_to_unless_current (image_tag "logo_HBS.png"), root_url %></p>
   </section>
   <section id="header-contact">
     <h3>+420 111 222 333 </h3>
