@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  layout "application"
+
   def home
     @categories = Category.all 
     @articles = Article.recent
