@@ -3,15 +3,16 @@
     <section id="footer-contact">
       <p class="footer-title">CONTACT<p>
         <ul>
-          <li>+420 111 222 333</li>
-          <li>+420 111 222 333</li>
-          <li><%= mail_to "info@suck.com" %></li>
+          <li><%= image_tag "phone_icon.png" %> <span style="margin-left: 9px;">+420 111 222 333</span></li>
+          <li><%= image_tag "fax_icon.png" %> <span style="margin-left: 2px;">+420 111 222 333</span></li>
+          <li><%= image_tag "mail_icon.png" %> <span style="margin-left: 5px;"><%= mail_to "info@suck.com" %></span></li>
           <li style="width:300px; padding-top: 10px;">
             <div class="footer-li-item">
-              <table style="width:260px;">
+              <table style="width:322px;">
                 <tr>
-                  <td style="width:120px;">K Vypichu 1308 25219 RUDNÁ</td>
-                  <td style="width:140px;"><%= link_to "Show on map", root_url, {:class => "ext-button"} %></td>
+                  <td style="width:27px;"><%= image_tag "location_icon.png" %></td>
+                  <td style="width:140px;">K Vypichu 1308 25219 RUDNÁ</td>
+                  <td style="width:160px;"><%= link_to "Show on map", root_url, {:class => "ext-button"} %></td>
                 </tr>
               </table>
             </div>
@@ -29,8 +30,7 @@
         </ul>
     </section>
     <section id="footer-information">
-      <p class="footer-title">INFORMATION</p>
-        <%= image_tag "logo.png" %>
+        <%= image_tag "logo_HBS_footer.png" %>
         <div id="footer-image-title">H Service Bohemia s.r.o.</div>
         
         <div id="footer-copyright">
@@ -42,5 +42,7 @@
       </div>
     </section>
   </section>
+  <div id="cleaner"></div>
+  <section id="developed">Developed by <%= link_to "Mighty creations", "http://creations.cz" %><section>
   <div id="cleaner"></div>
 </footer>

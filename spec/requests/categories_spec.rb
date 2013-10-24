@@ -8,8 +8,10 @@ describe "Categories" do
   before(:each) { sign_in user}
 
   describe "category creation" do
-    before do      
-      visit new_category_path(locale: "en") 
+    before do
+      I18n.available_locales.each do |locale|
+        visit new_category_path(locale: locale) 
+      end
     end
 
     describe "with invalid information" do
