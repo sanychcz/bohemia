@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   validates :description, presence: true
   validates :features, presence: true
   validates :category_id, presence: true
+  validates :annotation, presence: true, length: { maximum: 250 }
 
   belongs_to :category
   has_many :photos, :as => :photoable

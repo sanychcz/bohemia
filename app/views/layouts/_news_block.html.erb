@@ -11,7 +11,7 @@
       <div class="main-news-item-desc">
         <p class="news-item-date"><%= article.created_at.strftime("%d.%m.%y") %></p>
         <p class="news-item-title"><%= link_to article.title, article_path(article) %></p>
-        <p class="news-item-desc"><%= article.title %></p>
+        <p class="news-item-desc"><%= article.annotation %></p>
       </div>
     </section>
     <section id="cleaner"></section>

@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @article.photos.build
   end
 
   def create
@@ -48,7 +49,8 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :content, photos_attributes: [:id,:name,:image, :photoable_id, :photoable_type, :_destroy] )
+      params.require(:article).permit(:title, :annotation, :content, 
+                      photos_attributes: [:id,:name,:image, :photoable_id, :photoable_type, :_destroy] )
     end
 
     def resolve_layout

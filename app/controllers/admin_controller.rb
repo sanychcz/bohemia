@@ -4,20 +4,17 @@ class AdminController < ApplicationController
   layout "admin"
 
   def admin_home
-    @users = User.all
-    @categories = Category.all
-    @articles = Article.all
   end
 
   def admin_categories
-    @categories = Category.all
+    @categories = Category.includes(:documents, :photos).to_a
   end
 
   def admin_products
-    @products = Product.all
+    @products = Product.includes(:documents, :photos).to_a
   end
 
   def admin_articles
-    @articles = Article.all
+    @articles = Article.includes(:photos).to_a
   end
 end

@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022080859) do
+ActiveRecord::Schema.define(version: 20131025153615) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "annotation"
   end
 
   create_table "categories", force: true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131022080859) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
+    t.text     "annotation"
   end
 
   create_table "documents", force: true do |t|
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(version: 20131022080859) do
     t.text     "features"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "annotation"
   end
 
   create_table "users", force: true do |t|

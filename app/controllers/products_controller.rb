@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
   private
 
     def product_params
-      params.require(:product).permit(:name, :description, :features, :category_id, 
+      params.require(:product).permit(:name, :description, :annotation, :features, :category_id, 
                       photos_attributes: [:id,:name,:image, :main, :photoable_id, :photoable_type, :_destroy],
                       documents_attributes: [:id,:name,:doc, :documentable_id, :documentable_type, :_destroy])
     end

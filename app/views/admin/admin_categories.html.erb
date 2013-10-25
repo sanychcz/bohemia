@@ -21,11 +21,11 @@
       <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td>
-          <% category.photos.each do |p| %>
-            <%= image_tag p.image_url(:thumb).to_s %>
-          <% end %>
-        </td>
+
+        <% category.photos.each do |p| %>
+          <td><%= image_tag p.image_url(:thumb) %></td>
+        <% end %>  
+
         <td>
           <% category.documents.each do |d| %>
             <%= link_to d.name, d.doc_url %>

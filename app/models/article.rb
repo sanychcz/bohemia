@@ -2,6 +2,7 @@ class Article < ActiveRecord::Base
 
   validates :title, presence: true
   validates :content, presence: true
+  validates :annotation, presence: true, length: { maximum: 160 }
 
   has_many :photos, :as => :photoable
   accepts_nested_attributes_for :photos, :allow_destroy => true

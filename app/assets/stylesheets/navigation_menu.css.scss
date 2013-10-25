@@ -43,11 +43,11 @@
 }
 
 #cssmenu > ul > li:first-child a {
-  padding: 10px 72px 10px 0;
+  padding: 10px 36px 10px 36px;
 }
 
 #cssmenu > ul > li:last-child a {
-  padding: 10px 0 10px 72px;
+  padding: 10px 36px 10px 36px;
 }
 
 #cssmenu > ul > li a {
@@ -58,6 +58,8 @@
 
 #cssmenu > ul > li a:hover {
   text-decoration: none;
+  background-color: #076b9e;
+  color: white;
 }
 
 #cssmenu .has-sub {

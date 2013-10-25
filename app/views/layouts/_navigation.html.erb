@@ -3,15 +3,15 @@
     <ul>
        <li><%= link_to "About us", about_path %></li>
        <li><%= link_to "News", articles_path %></li>
-       <li class='has-sub'><%= link_to "Production", products_path %>
+       <li class='has-sub'><%= link_to "Production", categories_path %>
           <ul>
             <% @categories.each do |category| %>
              <li><%= link_to category.name, category_path(category) %></li>
-            <% end %> 
+            <% end %>
           </ul>
        </li>
        <li><%= link_to "Download", download_path %></li>
-       <li class='last'><%= link_to "Contact", contact_path %></li>
+       <li><%= link_to "Contact", contact_path %></li>
     </ul>
   </div>
 </section>
