@@ -1,17 +1,17 @@
 <section id="navigation">
   <div id='cssmenu'>
     <ul>
-       <li><%= link_to "About us", about_path %></li>
-       <li><%= link_to "News", articles_path %></li>
-       <li class='has-sub'><%= link_to "Production", categories_path %>
-          <ul>
-            <% @categories.each do |category| %>
-             <li><%= link_to category.name, category_path(category) %></li>
-            <% end %>
-          </ul>
+       <%= nav_link "About us", about_path %>
+       <%= nav_link "News", articles_path %>
+       <li id="production"><%= nested_nav_link "Production", categories_path %>
+        <ul>
+          <% @categories.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
        </li>
-       <li><%= link_to "Download", download_path %></li>
-       <li><%= link_to "Contact", contact_path %></li>
+      <%= nav_link "Download", download_path %>
+      <%= nav_link "Contact", contact_path %>
     </ul>
   </div>
 </section>

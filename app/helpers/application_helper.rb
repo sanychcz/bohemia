@@ -10,14 +10,28 @@ module ApplicationHelper
   end
 
   def nav_link(link_text, link_path)
-    class_name = current_page?(link_path) ? 'nav-active' : 'nav-nonactive'
+    class_name = 'active' if current_page?(link_path)
 
     if current_page?(link_path)
       content_tag(:li, :class => class_name ) do
-        link_text
-      end
+        link_text 
+      end 
     else          
       content_tag(:li, :class => class_name) do
+        link_to link_text, link_path
+      end
+    end
+  end
+
+  def nested_nav_link(link_text, link_path)
+    class_name = 'nest-active' if current_page?(link_path)
+
+    if current_page?(link_path) && current_page?(:controller => "categories")
+      content_tag(:div, :class => class_name ) do
+        link_text 
+      end 
+    else          
+      content_tag(:div, :class => class_name) do
         link_to link_text, link_path
       end
     end
@@ -33,5 +47,4 @@ module ApplicationHelper
       "English"  
     end
   end
-
 end

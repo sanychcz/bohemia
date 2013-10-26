@@ -1,27 +1,51 @@
-#cssmenu ul, #cssmenu li, #cssmenu span
-  #cssmenu a {
-    margin: 0;
-    padding: 0;
-    position: relative;
+#cssmenu .active {
+  display: inline-block;
+  font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #076b9e;
+  float: left;
+  line-height: 52px;
+}
+
+#cssmenu .active a{
+  color: #fff;
+}
+
+
+#cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #cssmenu:after,
-  #cssmenu ul:after {
-    content: '';
-    display: block;
-    clear: both;
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 #cssmenu {
   background: #fff;
   width: 1060px;
   height: 52px;
-  padding: 0 60px;
 }
 
 #cssmenu a {
   display: inline-block;
-  font-family: 'pt_sans_narrowregular', Helvetica, Arial, Verdana, sans-serif;
+  font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -35,53 +59,44 @@
 
 #cssmenu > ul > li {
   float: left;
-  height: 100%
+  height: 100%;
+  width: 20%;
 }
 
 #cssmenu > ul > li a {
     color: #1caaed;
 }
 
-#cssmenu > ul > li:first-child a {
-  padding: 10px 36px 10px 36px;
-}
-
-#cssmenu > ul > li:last-child a {
-  padding: 10px 36px 10px 36px;
-}
-
 #cssmenu > ul > li a {
   line-height: 34px;
-  padding: 10px 72px;
-  filter: none;
+  padding: 9px 0;
 }
 
 #cssmenu > ul > li a:hover {
-  text-decoration: none;
-  background-color: #076b9e;
-  color: white;
+text-decoration: none;
 }
 
-#cssmenu .has-sub {
+#production {
   display: block;
-  background-image: url("down_arrow.png");
+  background-image: url(images/down_arrow.png);
   background-repeat: no-repeat;
-  background-position: 85% center;
+  background-position: 83% center;
 }
 
-#cssmenu .has-sub:hover {
+#production:hover {
   display: block;
-  background-image: url("up_arrow.png");
+  background-image: url(images/up_arrow.png);
   background-repeat: no-repeat;
-  background-position: 85% center;
+  background-position: 83% center;
   background-color: #076b9e;
 }
 
-#cssmenu .has-sub:hover a {
+
+#production:hover a {
   color: #fff;
 }
 
-#cssmenu .has-sub:hover ul {
+#production:hover ul {
   display: block;
   padding: 10px 0;
   background: #055787;
@@ -92,9 +107,9 @@
   background: -ms-linear-gradient(top, #055787 0%,#076b9e 50%,#076b9e 100%);
   background: linear-gradient(to bottom, #055787 0%,#076b9e 50%,#076b9e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#055787', endColorstr='#076b9e',GradientType=0 );
-}
+  }
 
-#cssmenu .has-sub ul {
+#production ul {
   display: none;
   position: absolute;
   top: 52px;
@@ -106,15 +121,15 @@
   *width: 100%;
 }
 
-#cssmenu .has-sub a:hover {
-  color: #fff;
+#production a:hover{
+color: #fff;
 }
 
-#cssmenu .has-sub ul li {
+#production ul li {
   text-align: left;
 }
 
-#cssmenu .has-sub ul li a {
+#production ul li a {
   color: #fff;
   font-size: 16px;
   font-weight: normal;
@@ -123,4 +138,22 @@
   line-height: 130%;
   padding: 10px 15px;
   text-align: left;
+}
+
+#production ul li:hover {
+  background-color: #076b9e;
+}
+
+#production {
+  .nest-active {
+    background-color: #076b9e;
+    line-height: 52px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+    color: white;
+  }
 }
