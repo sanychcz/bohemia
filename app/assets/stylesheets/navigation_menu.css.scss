@@ -155,5 +155,16 @@ color: #fff;
     font-weight: bold;
     font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
     color: white;
+    display: block;
+    background-image: url("down_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 89% center;
+  }
+  .nest-active:hover {
+    display: block;
+    background-image: url("up_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 89% center;
+    background-color: #076b9e;
   }
 }
