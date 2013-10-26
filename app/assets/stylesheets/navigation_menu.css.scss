@@ -1,6 +1,6 @@
 #cssmenu .active {
   display: inline-block;
-  font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+  font-family: 'pt_sans_narrowregular', Helvetica, Arial, Verdana, sans-serif;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -16,7 +16,6 @@
   color: #fff;
 }
 
-
 #cssmenu ul,
 #cssmenu li,
 #cssmenu span,
@@ -24,7 +23,7 @@
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+  font-family: 'pt_sans_narrowregular', Helvetica, Arial, Verdana, sans-serif;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -39,18 +38,20 @@
 
 #cssmenu {
   background: #fff;
-  width: 1060px;
+  width: 1000px;
+  margin: 0 auto;
   height: 52px;
 }
 
 #cssmenu a {
   display: inline-block;
-  font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+  font-family: 'pt_sans_narrowregular', Helvetica, Arial, Verdana, sans-serif;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 18px;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 #cssmenu ul {
@@ -140,10 +141,6 @@ color: #fff;
   text-align: left;
 }
 
-#production ul li:hover {
-  background-color: #076b9e;
-}
-
 #production {
   .nest-active {
     background-color: #076b9e;
@@ -153,7 +150,7 @@ color: #fff;
     letter-spacing: 1px;
     font-size: 18px;
     font-weight: bold;
-    font-family: PT Sans Narrow, Helvetica, Arial, Verdana, sans-serif;
+    font-family: 'pt_sans_narrowregular', Helvetica, Arial, Verdana, sans-serif;
     color: white;
     display: block;
     background-image: url("down_arrow.png");

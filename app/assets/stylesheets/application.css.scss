@@ -74,19 +74,19 @@ body.app-layout {
  #header-logo {
   float:left;
   position: relative;
-  margin: 10px 50px 0px 50px;
+  margin: 20px 50px 0px 50px;
  }
 
  #header-contact {
   float: right;
   position: relative;
-  margin: 25px 100px 0px 100px;
+  margin: 39px 100px 0px 100px;
 
   h3 {
     color:white;
     margin-bottom: 5px;    
   }
-  p {
+  span {
     margin-top:5px;
     text-align:right;
     a {
@@ -103,28 +103,7 @@ body.app-layout {
   margin: 0 auto;
   width: 1060px;
   height: 52px;  
- }
-
- #navigation-menu {
-  padding: 10px;
-  position: relative;
-  margin: auto;
-  width: 1060px;
-  height: 52px;
   background-color: white;
- }
-
- #navigation-menu ul {
-   background-color: #ff9e00;
-   margin: 10px auto;
-   width:900px;
-   height: auto;
-  }
-
-#navigation-menu ul li {
-  background-color: #ffd792;
-  display: inline-block;
-  margin: 0 30px 0 0;
  }
 
 
@@ -183,14 +162,14 @@ body.app-layout {
 #download {
   margin: 0 auto;
   width: 1060px;
-  height: 270px;
+  height: 290px;
   background-color: #2097db;
   
   h3 {
     text-align: center;
     color: white;
     margin:0px;
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     font-family: "pt_sansregular";
   }  
 }
