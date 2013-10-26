@@ -1,14 +1,15 @@
 class CategoriesController < ApplicationController
    
-  before_action :find_category, only: [:edit, :update, :destroy, :show]
+  before_action :find_category, only: [:edit, :update, :destroy ]
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
   layout :resolve_layout
 
   def index
-    @categories = Category.all
+    @categories = Category.includes(:photos).to_a
   end
 
   def show
+    @category = Category.includes( products: [:photos]).find(params[:id])
   end
 
   def new
