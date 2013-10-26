@@ -11,10 +11,15 @@
             <%= link_to image_tag(photo.image_url(:prod_show_thumb)), photo.image_url, class: "gallery" %>
           </section>
         <% end %>
-          <section class="show-product-thumb-photos">
-            <%= link_to image_tag(photo.image_url(:small_thumb)), photo.image_url, class: "gallery" %>
-          </section>
-      <% end %>
+      <% end %>  
+        <section id="show-product-thumb-photos">
+          <% @product.photos.each do |photo| %>
+            <div class="show-product-small-thumb">
+              <%= link_to image_tag(photo.image_url(:small_thumb)), photo.image_url, class: "gallery" %>
+            </div>
+          <% end %>
+        </section>
+      
     </section>
     <section id="show-product-inner-details">
       <div id="show-product-title"><%= @product.name.upcase %></div>

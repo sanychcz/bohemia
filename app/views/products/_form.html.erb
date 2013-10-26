@@ -4,8 +4,8 @@
       <%= render 'shared/error_message', object: f.object %>
       <p><%= f.association :category, collection: Category.all, :include_blank => false %></p>
       <%= f.input :name %>
-      <%= f.input :annotation, placeholder: 'Max 250 characters including spaces' %>
-      <%= f.input :description %>
+      <%= f.input :annotation, placeholder: 'Max 250 characters including spaces', :input_html => { class: 'zurb-form-text-area-small'}  %>
+      <%= f.input :description, :input_html => { class: 'zurb-form-text-area'} %>
       <%= f.input :features, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
       <hr />
       <%= f.fields_for :photos do |p| %>

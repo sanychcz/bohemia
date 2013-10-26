@@ -3,8 +3,8 @@
     <fieldset>
       <%= render 'shared/error_message', object: f.object %>
       <%= f.input :title %>
-      <%= f.input :annotation, placeholder: 'Max 160 characters including spaces' %>
-      <%= f.input :content %>
+      <%= f.input :annotation, placeholder: 'Max 160 characters including spaces', :input_html => { class: 'zurb-form-text-area-small'} %>
+      <%= f.input :content, :input_html => { class: 'zurb-form-text-area'} %>
       <hr />
       <%= f.fields_for :photos do |p| %>
        <div class="panel">
