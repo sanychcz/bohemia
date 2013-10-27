@@ -37,6 +37,7 @@ describe "Categories" do
       it "should create a category" do
         fill_in "Name",        with: category.name
         fill_in "Description", with: category.description
+        fill_in "Annotation",  with: category.annotation
         expect { click_button "Save" }.to change(Category, :count).by(1)
         page.should have_content(category.name)
       end

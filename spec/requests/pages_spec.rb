@@ -3,7 +3,14 @@ require 'spec_helper'
 describe "Pages" do
 
   let(:user){ FactoryGirl.create(:user) }
-  
+  let(:article) { FactoryGirl.create(:article) }
+  let(:article2) { FactoryGirl.create(:article2) }
+  let(:article3) { FactoryGirl.create(:article3) }
+  let(:category) { FactoryGirl.create(:category) }
+  let(:product) { FactoryGirl.create(:product) }
+  let(:product2) { FactoryGirl.create(:product2) }
+  let(:product3) { FactoryGirl.create(:product3) }
+
   describe "Home page" do
     it "should have the title 'Home'" do
       visit '/'
@@ -32,6 +39,35 @@ describe "Pages" do
       sign_in user
       visit '/'
       expect(page).not_to have_link('home')
+    end
+
+    describe "articles should be on main page" do
+
+      before { FactoryGirl.create(:article) }
+      before { FactoryGirl.create(:article2) }
+      before { FactoryGirl.create(:article3) }
+
+      it "should have products on main page" do
+        visit root_path
+        expect(page).to have_content(article.annotation)
+        expect(page).to have_content(article2.annotation)
+        expect(page).to have_content(article3.annotation)
+      end
+    end
+
+    describe "products should be on main page" do
+
+      before { FactoryGirl.create(:category) }
+      before { FactoryGirl.create(:product,  category: category) }
+      before { FactoryGirl.create(:product2, category: category) }
+      before { FactoryGirl.create(:product3, category: category) }
+
+      it "should have products on main page" do
+        visit root_path
+        expect(page).to have_content(product.annotation)
+        expect(page).to have_content(product2.annotation)
+        expect(page).to have_content(product3.annotation)
+      end
     end
   end
 

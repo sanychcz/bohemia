@@ -35,6 +35,7 @@ describe "Articles" do
       it "should create a article" do
         fill_in "Title",   with: article.title
         fill_in "Content", with: article.content
+        fill_in "Annotation", with: article.annotation
         expect { click_button "Save" }.to change(Article, :count).by(1)
         page.should have_content(article.title)
       end

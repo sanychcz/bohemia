@@ -39,6 +39,7 @@ describe "Products" do
         fill_in "Name",        with: product.name
         fill_in "Description", with: product.description
         fill_in "Features",    with: product.features
+        fill_in "Annotation",  with: product.annotation
         expect { click_button "Save" }.to change(Product, :count).by(1)
         page.should have_content(product.name)
       end

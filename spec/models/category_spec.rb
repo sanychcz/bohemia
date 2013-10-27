@@ -3,12 +3,14 @@ require 'spec_helper'
 describe Category do
 
   before { @category = Category.new(name: "category", 
-                                    description: "I'm the best category in the world") }
+                                    description: "I'm the best category in the world",
+                                    annotation: "Categoty annotation") }
 
   subject { @category }
 
   it { should respond_to(:name) }
   it { should respond_to(:description) }
+  it { should respond_to(:annotation) }
 
   it { should be_valid } 
 
@@ -36,4 +38,14 @@ describe Category do
     before { @category.description = "I'm the best category in the world" }
     it { should be_valid }
   end 
+
+  describe "when annotation is not present" do
+    before { @category.annotation = "" }
+    it { should_not be_valid }
+  end
+
+  describe "annotation should have max 250 chars" do
+    before { @category.annotation = "a" * 251 }
+    it { should_not be_valid }
+  end
 end
