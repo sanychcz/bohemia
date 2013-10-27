@@ -9,7 +9,7 @@ FactoryGirl.define do
   factory :category do
     name "category"
     description "I'm the best category in the world"
-    annotation "Category annotation"
+    annotation "Best category annotation"
   end
 
   factory :product do

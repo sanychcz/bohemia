@@ -55,6 +55,16 @@ describe "Pages" do
       end
     end
 
+    describe "category should be on main page" do
+
+      before { FactoryGirl.create(:category) }
+
+      it "should have category on main page" do
+        visit root_path
+        expect(page).to have_content(category.name)
+      end
+    end
+
     describe "products should be on main page" do
 
       before { FactoryGirl.create(:category) }
