@@ -27,6 +27,8 @@ group :test do
   gem "capybara", "~> 2.1.0"
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
@@ -39,6 +41,8 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+ruby "2.0.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
