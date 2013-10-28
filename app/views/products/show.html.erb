@@ -1,7 +1,7 @@
 <% provide :title, @product.name %>
 
 <section id="show-product-container">
-  <h3><%= link_to "WHAT WE OFFER:", categories_path %> <%= link_to @product.category.name.upcase, @product.category %> : <%= @product.name.upcase %></h3>
+  <h3><%= link_to <%= I18n.t(:what_we_offer) %>, categories_path %> <%= link_to @product.category.name.upcase, @product.category %> : <%= @product.name.upcase %></h3>
 
   <section id="show-product-inner">
     <section id="show-product-inner-gallery">

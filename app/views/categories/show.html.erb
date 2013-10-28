@@ -2,7 +2,7 @@
 
 <section id="show-category-container">
 
-  <h3><%= link_to "WHAT WE OFFER:", categories_path %> <%= @category.name.upcase %></h3>
+  <h3><%= link_to I18n.t(:what_we_offer), categories_path %> <%= @category.name.upcase %></h3>
   <section id="show-category-inner">
       <% @category.products.each do |product| %>
       <div class="show-category-item">

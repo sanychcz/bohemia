@@ -1,7 +1,7 @@
 <footer id="footer">
   <section id="footer-inner">
     <section id="footer-contact">
-      <p class="footer-title">CONTACT<p>
+      <p class="footer-title"><%= I18n.t(:contact) %><p>
         <ul>
           <li><%= image_tag "phone_icon.png" %> <span style="margin-left: 9px;">+420 111 222 333</span></li>
           <li><%= image_tag "fax_icon.png" %> <span style="margin-left: 2px;">+420 111 222 333</span></li>
@@ -12,7 +12,7 @@
                 <tr>
                   <td style="width:27px;"><%= image_tag "location_icon.png" %></td>
                   <td style="width:140px;">K Vypichu 1308 25219 RUDNÁ</td>
-                  <td style="width:160px;"><%= link_to "Show on map", root_url, {:class => "ext-button"} %></td>
+                  <td style="width:160px;"><%= link_to I18n.t(:show_on_map), root_url, {:class => "ext-button"} %></td>
                 </tr>
               </table>
             </div>
@@ -20,13 +20,13 @@
         </ul>
     </section>
     <section id="footer-sitemap">
-      <p class="footer-title">SITEMAP</p>
+      <p class="footer-title"><%= I18n.t(:sitemap) %></p>
         <ul>
-          <li><%= link_to "ABOUT US", about_path %></li>
-          <li><%= link_to "NEWS",     articles_path %></li>
-          <li><%= link_to "PRODUCTS", categories_path %></li>
-          <li><%= link_to "DOWNLOAD", download_path %></li>
-          <li><%= link_to "CONTACTS", contact_path %></li>
+          <li><%= link_to I18n.t(:footer_about),    about_path %></li>
+          <li><%= link_to I18n.t(:footer_news),     articles_path %></li>
+          <li><%= link_to I18n.t(:footer_products), categories_path %></li>
+          <li><%= link_to I18n.t(:footer_download), download_path %></li>
+          <li><%= link_to I18n.t(:footer_contact),  contact_path %></li>
         </ul>
     </section>
     <section id="footer-information">

@@ -47,4 +47,15 @@ module ApplicationHelper
       "English"  
     end
   end
+
+  def set_flag_locale(locale)
+    case locale
+    when :cs || "cs"
+      image_tag "flag-cz.png"
+    when :ru || "ru"
+      image_tag "flag-rus.png"
+    when :en || "en"
+      image_tag "flag-eng.png"
+    end
+  end
 end

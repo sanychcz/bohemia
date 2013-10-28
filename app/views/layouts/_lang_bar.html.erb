@@ -3,7 +3,7 @@
      <nav class="top-bar">
        <section class="top-bar-section">
         <ul class="right">
-          <li class="has-dropdown"><a href="">Language: <%= I18n.locale.upcase %></a>
+          <li class="has-dropdown"><a href=""><span style="margin-right:5px;"><%= I18n.t(:language_selection) %></span><%= set_flag_locale(I18n.locale) %></a>
             <ul class="dropdown">
               <% I18n.available_locales.each do |loc| %>
                 <% unless I18n.locale == loc  %>

@@ -1,17 +1,17 @@
 <section id="navigation">
   <div id='cssmenu'>
     <ul>
-       <%= nav_link "About us", about_path %>
-       <%= nav_link "News", articles_path %>
-       <li id="production"><%= nested_nav_link "Production", categories_path %>
+       <%= nav_link I18n.t(:menu_about), about_path %>
+       <%= nav_link I18n.t(:menu_news), articles_path %>
+       <li id="production"><%= nested_nav_link I18n.t(:menu_production), categories_path %>
         <ul>
           <% @categories.each do |category| %>
             <li><%= link_to category.name, category_path(category) %></li>
           <% end %>
         </ul>
        </li>
-      <%= nav_link "Download", download_path %>
-      <%= nav_link "Contact", contact_path %>
+      <%= nav_link I18n.t(:menu_download), download_path %>
+      <%= nav_link I18n.t(:menu_contact), contact_path %>
     </ul>
   </div>
 </section>

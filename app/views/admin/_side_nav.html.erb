@@ -6,7 +6,8 @@
     <li><%= link_to "Articles", "/admin/articles" %></li>
   </ul>
   <hr />
-  <span class="label"><%= I18n.locale %></span>
+  <h6>Language options</h6>
+  <span class="label alert"><%= I18n.locale %></span>
   <% I18n.available_locales.each do |loc| %>
     <% unless I18n.locale == loc  %>
       <%= link_to "#{loc}", :locale => loc %>

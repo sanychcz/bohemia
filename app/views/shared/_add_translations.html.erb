@@ -1,4 +1,4 @@
-<h6>Form is for <%= set_human_locale(I18n.locale) %> language.
+<h6>Form is for <span style="color: red;"><%= set_human_locale(I18n.locale) %></span> language.
   Add translations:
   <% I18n.available_locales.each do |locale| %>
     <% unless locale == I18n.locale %>
