@@ -1,5 +1,7 @@
 class Category < ActiveRecord::Base
 
+  translates :name, :description, :annotation
+
   validates :name, presence: true
   validates :description, presence: true
   validates :annotation, presence: true, length: { maximum: 250 }

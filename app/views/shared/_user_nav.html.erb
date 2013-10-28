@@ -10,7 +10,8 @@
         <li class="active"><%= link_to "admin", "/admin" %></li>
         <li class="active"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
       
-        <% if current_page?("/admin") || current_page?("/admin/categories") %>
+        <% if current_page?("/admin") || current_page?("/admin/categories") || current_page?("/admin/articles") ||
+                                      current_page?("/admin/products") %>
           <li class="active"><%= link_to "home", root_path %></li>
         <% end %>
        </ul>

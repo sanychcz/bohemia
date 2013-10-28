@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
 
-	translates :title, :content, :annotation
+  translates :title, :content, :annotation
 
   validates :title, presence: true
   validates :content, presence: true

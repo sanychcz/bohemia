@@ -1,5 +1,8 @@
 <div class="row">
   <%= simple_nested_form_for @category do |f| %>
+
+    <%= render "/shared/add_translations" %>
+
     <fieldset>
       <%= render 'shared/error_message', object: f.object %>
       <%= f.input :name %>
@@ -15,7 +18,7 @@
       <% end %>
 
       <%= f.fields_for :documents do |d| %>
-        <div class="panel">          
+        <div class="panel">
           <p><%= d.input :name %></p>
           <p><%= d.file_field :doc %> </p>
           <p><%= d.link_to_remove "Remove document" %></p>
