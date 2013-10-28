@@ -1,4 +1,7 @@
 <div class="row">
+
+  <%= render "/shared/add_translations" %>  
+
   <%= simple_nested_form_for @article do |f| %>
     <fieldset>
       <%= render 'shared/error_message', object: f.object %>

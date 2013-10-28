@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025153615) do
+ActiveRecord::Schema.define(version: 20131028100727) do
+
+  create_table "article_translations", force: true do |t|
+    t.integer  "article_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "content"
+    t.text     "annotation"
+  end
+
+  add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id", using: :btree
+  add_index "article_translations", ["locale"], name: "index_article_translations_on_locale", using: :btree
 
   create_table "articles", force: true do |t|
     t.string   "title"

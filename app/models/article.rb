@@ -1,5 +1,7 @@
 class Article < ActiveRecord::Base
 
+	translates :title, :content, :annotation
+
   validates :title, presence: true
   validates :content, presence: true
   validates :annotation, presence: true, length: { maximum: 160 }

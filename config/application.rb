@@ -22,6 +22,6 @@ module Bohemia
     config.autoload_paths += %W(#{config.root}/lib #{config.root}/app/uploaders)
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.precompile += %w( vendor/custom.modernizr.js )
-    
+    config.i18n.fallbacks = true
   end
 end

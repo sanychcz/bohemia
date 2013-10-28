@@ -1,0 +1,8 @@
+<h6>Form is for <%= set_human_locale(I18n.locale) %> language.
+  Add translations:
+  <% I18n.available_locales.each do |locale| %>
+    <% unless locale == I18n.locale %>
+      <%= link_to set_human_locale(locale), {:locale => locale}, {style: "text-decoration:underline;"} %>  
+    <% end %>
+  <% end %>
+</h6>
