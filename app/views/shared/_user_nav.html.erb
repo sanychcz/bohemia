@@ -7,7 +7,6 @@
     </ul>
     <section class="top-bar-section">
       <ul class="right">
-        <li class="active"><%= link_to "admin", "/admin" %></li>
         <li class="active"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
       
         <% if current_page?("/admin") || current_page?("/admin/categories") || current_page?("/admin/articles") ||

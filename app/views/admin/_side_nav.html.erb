@@ -1,10 +1,15 @@
 <div class="panel">
   <ul class="side-nav">
-    <li><%= link_to "Home", "/admin" %></li>
+    <li><%= link_to "Quick actions", "/admin" %></li>
     <li><%= link_to "Categories", "/admin/categories" %></li>
     <li><%= link_to "Products", "/admin/products" %></li>
     <li><%= link_to "Articles", "/admin/articles" %></li>
   </ul>
   <hr />
-  Language: <%= I18n.locale %>
+  <span class="label"><%= I18n.locale %></span>
+  <% I18n.available_locales.each do |loc| %>
+    <% unless I18n.locale == loc  %>
+      <%= link_to "#{loc}", :locale => loc %>
+    <% end %>
+  <% end %>
 </div>

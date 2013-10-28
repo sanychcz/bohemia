@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028104909) do
+ActiveRecord::Schema.define(version: 20131028110127) do
 
   create_table "article_translations", force: true do |t|
     t.integer  "article_id", null: false
@@ -73,6 +73,20 @@ ActiveRecord::Schema.define(version: 20131028104909) do
     t.datetime "updated_at"
     t.boolean  "main"
   end
+
+  create_table "product_translations", force: true do |t|
+    t.integer  "product_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
+    t.text     "annotation"
+    t.text     "features"
+  end
+
+  add_index "product_translations", ["locale"], name: "index_product_translations_on_locale", using: :btree
+  add_index "product_translations", ["product_id"], name: "index_product_translations_on_product_id", using: :btree
 
   create_table "products", force: true do |t|
     t.integer  "category_id"

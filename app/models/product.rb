@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
 
+  translates :name, :description, :annotation, :features
+
   validates :name, presence: true
   validates :description, presence: true
   validates :features, presence: true
