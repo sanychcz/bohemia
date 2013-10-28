@@ -10,7 +10,7 @@
       <hr />
       <%= f.fields_for :photos do |p| %>
        <div class="panel">
-          <p>Photo</p>
+          <p>Photo (keep proportions: 375x260) </p>
           <p><%= image_tag p.object.image_url(:thumb) %></p>
           <p><%= p.file_field :image %> </p>
           <p><%= p.input :main, :as => :radio_buttons, label: 'Main photo? Choose only one!' %> </p>
