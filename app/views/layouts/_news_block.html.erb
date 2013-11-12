@@ -8,7 +8,7 @@
         <% if photo %>
           <%= image_tag photo.image_url(:thumb).to_s %>
         <% else %>
-          <%= image_tag('dummy_110x110.png') %>
+          <%= image_tag "dummy_110x110.png" %>
         <% end %>
       </div>
       <% end %>
