@@ -4,11 +4,8 @@
   <div class="category-item">
     <div class="category-item-image">
       <% category.photos.each do |photo| %>
-        <% if photo.present? %>
-          <%= image_tag "dummy_325x210.png" %>          
-        <% else %>
-          <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
-        <% end %>
+        <%= image_tag "dummy_325x210.png" %>          
+        <!-- <%= image_tag photo.image_url(:cat_main_thumb).to_s %> -->
       <% end %>
     </div>
     <div id="category-item-name">

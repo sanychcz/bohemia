@@ -4,12 +4,12 @@
   <% @products.each do |product| %>
     <section class="main-products-item">
       <% product.photos.each do |photo| %>
-        
+        <% if photo.main? %>
           <div class="main-products-item-photo">
             <!-- <%= image_tag photo.image_url(:prod_main_thumb).to_s %> -->
-            <%= image_tag "dummy_250x150.png" %>
+            <%= image_tag "dummy_200x150.png" %>
           </div>
-        
+        <% end %>
       <% end %>
       <div class="main-products-item-desc">
         <p class="products-item-name"><%= link_to product.name.upcase, product_path(product) %></p>
