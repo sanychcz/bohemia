@@ -5,9 +5,9 @@
     <div class="category-item-image">
       <% category.photos.each do |photo| %>
         <% if photo.present? %>
-          <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
+          <%= image_tag "dummy_325x210.png" %>          
         <% else %>
-          <%= image_tag "dummy_325x210.png" %>
+          <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
         <% end %>
       <% end %>
     </div>
