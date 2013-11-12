@@ -8,7 +8,10 @@
     <% @articles.each do |article| %>
       <section class="index-article-item">
         <% article.photos.each do |photo| %>
-          <div class="index-article-photo"><%= image_tag photo.image_url(:thumb).to_s %></div>
+          <div class="index-article-photo">
+            <!-- <%= image_tag photo.image_url(:thumb).to_s %> -->
+            <%= image_tag "dummy_100x110.png" %>
+          </div>
         <% end %>
         <div class="index-article-description">
           <div class="index-article-date"><%= article.created_at.strftime("%d.%m.%y") %></div>

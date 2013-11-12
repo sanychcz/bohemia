@@ -8,7 +8,10 @@
     <% @categories.each do |category| %>
       <section class="index-category-item">
         <% category.photos.each do |photo| %>
-          <div class="index-category-photo"><%= image_tag photo.image_url(:cat_main_thumb).to_s %></div>
+          <div class="index-category-photo">
+            <!-- <%= image_tag photo.image_url(:cat_main_thumb).to_s %> -->
+            <%= image_tag "dummy_325x210.png" %>
+          </div>
         <% end %>
         <div class="index-category-description">
           <div class="index-category-title"><%= link_to category.name.upcase, category_path(category) %></div>

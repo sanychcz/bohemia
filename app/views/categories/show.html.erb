@@ -9,7 +9,8 @@
         <% product.photos.each do |photo| %>
           <% if photo.main? %>
             <div class="show-category-item-photo">
-              <%= image_tag photo.image_url(:prod_main_thumb).to_s %>
+              <%= image_tag "dummy_200x150.png" %>
+              <!-- <%= image_tag photo.image_url(:prod_main_thumb).to_s %> -->
             </div>
           <% end %>  
         <% end %>

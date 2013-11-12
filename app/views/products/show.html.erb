@@ -8,14 +8,16 @@
       <% @product.photos.each do |photo| %>
         <% if photo.main? %>
           <section id="show-product-main-photo">
-            <%= link_to image_tag(photo.image_url(:prod_show_thumb)), photo.image_url, class: "gallery" %>
+            <!-- <%= link_to image_tag(photo.image_url(:prod_show_thumb)), photo.image_url, class: "gallery" %> -->
+            <%= link_to image_tag("dummy_375x260.png"), root_url, class: "gallery" %>
           </section>
         <% end %>
       <% end %>  
         <section id="show-product-thumb-photos">
           <% @product.photos.each do |photo| %>
             <div class="show-product-small-thumb">
-              <%= link_to image_tag(photo.image_url(:small_thumb)), photo.image_url, class: "gallery" %>
+              <!-- <%= link_to image_tag(photo.image_url(:small_thumb)), photo.image_url, class: "gallery" %> -->
+              <%= link_to image_tag("dummy_71x71.png"), root_url, class: "gallery" %>
             </div>
           <% end %>
         </section>
