@@ -28,7 +28,7 @@ html, body {
   padding: 0;
   width: 1060px;
   font-family: 'PT Sans Narrow';
-  font-weight: normal;
+  font-weight: 400;
 }
 
 body.app-layout {
@@ -77,6 +77,7 @@ body.app-layout {
   height: 141px;
   background-image: url("header_bg.png");
   font-family: 'PT Sans Narrow';
+  font-weight: 400;
  }
 
  #header-logo {
