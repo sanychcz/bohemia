@@ -3,7 +3,13 @@
 <% @categories.each do |category| %>
   <div class="category-item">
     <div class="category-item-image">
-      <%= photo_for_category(category) %>
+      <% category.photos.each do |photo| %>
+        <% if photo.present? %>
+          <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
+        <% else %>
+          <%= image_tag "dummy_325x210.png" %>
+        <% end %>
+      <% end %>
     </div>
     <div id="category-item-name">
       <div class="category-item-name-title">
