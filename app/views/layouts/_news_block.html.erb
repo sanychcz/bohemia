@@ -5,7 +5,7 @@
     <section class="main-news-item">
       <% article.photos.each do |photo| %>
       <div class="main-news-item-photo">
-        <% if photo %>
+        <% if File.exists?(photo) %>
           <%= image_tag photo.image_url(:thumb).to_s %>
         <% else %>
           <%= image_tag "dummy_110x110.png" %>
