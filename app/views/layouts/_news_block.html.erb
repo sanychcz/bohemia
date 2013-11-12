@@ -5,8 +5,12 @@
     <section class="main-news-item">
       <% article.photos.each do |photo| %>
       <div class="main-news-item-photo">
-        <%= image_tag photo.image_url(:thumb).to_s %>
-      </div>        
+        <% if photo %>
+          <%= image_tag photo.image_url(:thumb).to_s %>
+        <% else %>
+          <%= image_tag('dummy_110x110.png') %>
+        <% end %>
+      </div>
       <% end %>
       <div class="main-news-item-desc">
         <p class="news-item-date"><%= article.created_at.strftime("%d.%m.%y") %></p>

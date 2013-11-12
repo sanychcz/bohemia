@@ -4,11 +4,15 @@
   <div class="category-item">
     <div class="category-item-image">
       <% category.photos.each do |photo| %>
-        <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
+        <% if photo %>
+          <%= image_tag photo.image_url(:cat_main_thumb).to_s %>
+        <% else %>
+          <%= image_tag('dummy_325x210.png') %>
+        <% end %>
       <% end %>
     </div>
     <div id="category-item-name">
-      <div class="category-item-name-title">  
+      <div class="category-item-name-title">
         <%= link_to category.name.upcase, category_path(category) %>
       </div>
     </div>
