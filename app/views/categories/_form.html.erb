@@ -14,7 +14,13 @@
           <p>Photo (keep proportions: 325x210)</p>
           <p><%= image_tag p.object.image_url(:thumb) %></p>
           <p><%= p.file_field :image %> </p>
-          <p><%= p.check_box :remove_image %></p>
+          <p>
+            <label>
+              <%= p.check_box :remove_image %>
+              Remove image
+            </label>
+          </p>
+          <p><%= p.link_to_remove "Remove image" %></p>
         </div>
       <% end %>
 
