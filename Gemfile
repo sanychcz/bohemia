@@ -16,6 +16,8 @@ gem "nested_form"
 gem 'kaminari'
 gem 'ckeditor_rails'
 gem "ckeditor"
+gem 'json', '~> 1.8.3'
+gem 'libv8', '~> 4.5.95.5'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
@@ -42,7 +44,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-ruby "2.0.0"
+ruby "2.2.2"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
